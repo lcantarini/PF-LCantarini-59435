@@ -1,0 +1,935 @@
+20:35:43 From [Tutora] Sofia Altamirano to Everyone:
+	Reacted to "buenas" with 👋🏽
+20:35:46 From [Tutora] Sofia Altamirano to Everyone:
+	Reacted to "guenas" with 👋🏽
+20:35:54 From Nicolás Pradenas to Everyone:
+	buenas tardes a todos 🤝
+20:35:59 From [Tutora] Sofia Altamirano to Everyone:
+	Reacted to "buenas tardes a todo..." with 👋🏽
+20:36:18 From Fernando Ledesma Sánchez to Everyone:
+	Hola, buenas noches
+20:36:26 From [Tutora] Sofia Altamirano to Everyone:
+	Reacted to "Hola, buenas noches" with 👋🏽
+20:36:33 From Federico Livingston to Everyone:
+	buenas noches
+20:36:37 From [Tutora] Sofia Altamirano to Everyone:
+	Reacted to "buenas noches" with 👋🏽
+20:40:51 From Romina Giménez to Everyone:
+	holaa recien pude entrar, vieron mucho ya?
+20:41:07 From [TUTOR] Nicolas Temprano to Everyone:
+	Replying to "holaa recien pude en..."
+	
+	Hola Romi! No acabamos de comenzar
+20:41:12 From Romina Giménez to Everyone:
+	ahhh buenisimo :)
+20:41:16 From [Tutora] Sofia Altamirano to Everyone:
+	Replying to "holaa recien pude en..."
+	
+	Hola Romi, vamos a crear un pipe personalizado
+20:41:18 From Romina Giménez to Everyone:
+	Reacted to "Hola Romi! No acabam..." with ❤️
+20:41:21 From Romina Giménez to Everyone:
+	Reacted to "Hola Romi, vamos a c..." with 🎉
+20:41:28 From Julio Cisneros Rosales to Everyone:
+	ee ese micro
+20:41:32 From Leonardo Cantarini to Everyone:
+	Recomendas que usemos nuestro proyecto final?? No lo tengo tan completo
+20:41:33 From [Tutora] Sofia Altamirano to Everyone:
+	Reacted to "ee ese micro" with 😂
+20:41:35 From Romina Giménez to Everyone:
+	Reacted to "ee ese micro" with 😂
+20:41:38 From Leonardo Cantarini to Everyone:
+	Para seguirte
+20:41:42 From Nayla Saez to Everyone:
+	jaja
+20:42:54 From [Tutora] Sofia Altamirano to Everyone:
+	El proyecto final, en esta primer pre entrega, tiene sus propios requerimientos de pipe y directiva personalizada
+20:48:07 From Federico Livingston to Everyone:
+	?
+20:48:13 From Julio Cisneros Rosales to Everyone:
+	Nada todavia bien
+20:48:23 From Federico Livingston to Everyone:
+	recibe un solo valor siempre o puede recibir mas de uno?
+20:49:15 From Eduardo Vazzoler to Everyone:
+	buenas
+20:49:31 From Javier Fain to Everyone:
+	no me queda claro cual es la funcionalidad de que el pipe te cambie el valor del elemento usuario (por ejemplo)
+20:49:33 From [TUTOR] Nicolas Temprano to Everyone:
+	Reacted to "no me queda claro cu..." with 👋
+20:49:35 From [TUTOR] Nicolas Temprano to Everyone:
+	Removed a 👋 reaction from "no me queda claro cu..."
+20:49:38 From [TUTOR] Nicolas Temprano to Everyone:
+	Reacted to "buenas" with 👋
+20:49:47 From Romina Giménez to Everyone:
+	claro esto seria como para mostrar la data de una manera distinta a la que nos viene desde el back, sin necesidad de tocar la bdd?
+20:50:17 From Romina Giménez to Everyone:
+	ahhhhh
+20:50:30 From [Tutora] Sofia Altamirano to Everyone:
+	Replying to "no me queda claro cu..."
+	
+	La funcionalidad de los pipes es mejorar la experiencia del usuario
+20:50:45 From Nayla Saez to Everyone:
+	Siempre se usan para STRING nomás ?
+20:50:47 From [TUTOR] Nicolas Temprano to Everyone:
+	Replying to "no me queda claro cu..."
+	
+	Los pipes nos ayuda a transformar los datos de manera sencilla
+20:51:03 From [Tutora] Sofia Altamirano to Everyone:
+	Replying to "claro esto seria com..."
+	
+	Si, es un caso
+20:51:32 From [Tutora] Sofia Altamirano to Everyone:
+	Replying to "Siempre se usan para..."
+	
+	No! Se puede usar con numbers (para mostrar puntos o comas), fechas (para mostrarlas con un cierto formato), etc
+20:51:35 From Javier Fain to Everyone:
+	Replying to "no me queda claro cu..."
+	
+	gracias ambos! por el momento lo veo mas útil para mantener el código mas conciso
+20:51:42 From Javier Fain to Everyone:
+	Replying to "no me queda claro cu..."
+	
+	pero es cuestión de tiempo jeje
+20:51:55 From [TUTOR] Nicolas Temprano to Everyone:
+	Replying to "Siempre se usan para..."
+	
+	Nono, se pueden utilizar para una gran variedad de tipos de datos
+20:52:31 From Nayla Saez to Everyone:
+	Replying to "Siempre se usan para..."
+	
+	Gracias, hay cosas para las cuales no puedan usarse?
+20:55:54 From Federico Livingston to Everyone:
+	si tengo mas de un argumento los separo por "," o tengo que armar el array?
+20:56:20 From [TUTOR] Nicolas Temprano to Everyone:
+	Replying to "Siempre se usan para..."
+	
+	Hay situaciones en las que no se recomiendan utilizar por ejemplo si requiere de lógica muy compleja puede afectar el rendimiento de la aplicación
+20:56:51 From Federico Livingston to Everyone:
+	si
+20:57:55 From Romina Giménez to Everyone:
+	profe si quisieramos mostrar datos que tenemos en dos columnas de alguna tabla en una nueva vista pero ocupando una sola columna, tambien se usaria esto? o ahi ya es conveniente que lo haga el de back y nos lo mande como queremos mostrarlo en la tabla especificamente?
+20:59:35 From Romina Giménez to Everyone:
+	😯
+20:59:38 From [Tutora] Sofia Altamirano to Everyone:
+	Replying to "profe si quisieramos..."
+	
+	Es un buen caso para usar un pipe, siempre y cuando entiendas que solo se va a modificar en el template, pero van a seguir siendo datos separados
+21:00:11 From Romina Giménez to Everyone:
+	Reacted to "Es un buen caso para..." with 🙌
+21:01:54 From Juan Pardo to Everyone:
+	Replying to "profe si quisieramos..."
+	
+	Tambien tiene que ver con el tamaño de tu tabla. Hacerlo en mysql es mas rápido, pero también es mas costoso si vas a hacer millones de consultas
+21:03:06 From Romina Giménez to Everyone:
+	Reacted to "Tambien tiene que ve..." with ❤️
+21:05:19 From Javier Fain to Everyone:
+	🤪cuantas cosas jaja
+21:05:30 From Romina Giménez to Everyone:
+	Reacted to "🤪cuantas cosas jaja" with 😂
+21:05:52 From Romina Giménez to Everyone:
+	Replying to "🤪cuantas cosas jaja"
+	
+	yo estoy con 3hs de sueño solo, estoy dando lo mejor de mi en este momento haha
+21:06:03 From Javier Fain to Everyone:
+	Reacted to "yo estoy con 3hs de ..." with ❤️
+21:06:09 From Javier Fain to Everyone:
+	Replying to "🤪cuantas cosas jaja"
+	
+	en piloto automático :P
+21:06:10 From Romina Giménez to Everyone:
+	que emocioonn
+21:06:15 From Romina Giménez to Everyone:
+	Reacted to "en piloto automático..." with 😂
+21:06:25 From Nayla Saez to Everyone:
+	Reacted to "yo estoy con 3hs de ..." with 😅
+21:06:59 From Lucas Miguez to Everyone:
+	sep todo bien
+21:07:00 From Leidy Uribe Marcos to Everyone:
+	todo claro
+21:07:06 From Maximiliano Leurino to Everyone:
+	bien bien
+21:07:58 From Romina Giménez to Everyone:
+	una pregunta, cuando tenemos el ELEMENT_DATA, en si es el nombre de una variable? podriamos ponerle cualquier nombre? no recuerdo bien (Creo que ya lo habiamos visto anteriormente)
+21:09:17 From Romina Giménez to Everyone:
+	creo que si
+21:09:17 From Javier Fain to Everyone:
+	sip
+21:09:48 From Leidy Uribe Marcos to Everyone:
+	por medio de los pipes se puede cambiar la apariencia o estilos?
+21:09:57 From Leidy Uribe Marcos to Everyone:
+	o no es rcomendable?
+21:10:11 From [Tutora] Sofia Altamirano to Everyone:
+	Replying to "una pregunta, cuando..."
+	
+	Puede llevar cualquier nombre
+21:10:27 From Leidy Uribe Marcos to Everyone:
+	gracias
+21:10:34 From Romina Giménez to Everyone:
+	Reacted to "Puede llevar cualqui..." with 🙌
+21:10:50 From [TUTOR] Nicolas Temprano to Everyone:
+	Replying to "una pregunta, cuando..."
+	
+	Romi, si podes utilizar otro nombre. Lo importante es que sea claro y tenga sentido con lo que representa
+21:10:59 From [Tutora] Sofia Altamirano to Everyone:
+	Replying to "una pregunta, cuando..."
+	
+	Luego tenés que referenciarla en el HTML  <mat-table [dataSource]="nombreVariable">
+21:11:09 From Romina Giménez to Everyone:
+	Reacted to "Romi, si podes utili..." with ❤️
+21:11:12 From Romina Giménez to Everyone:
+	Reacted to "Luego tenés que refe..." with ❤️
+21:11:13 From Leandro Soto to Everyone:
+	Reacted to "Luego tenés que refe..." with 👍
+21:12:57 From Nayla Saez to Everyone:
+	Background color puede estar mal escrito ?
+21:13:12 From Nayla Saez to Everyone:
+	👍🏼
+21:13:14 From Romina Giménez to Everyone:
+	eso iba a preguntar capaz es sin la s
+21:14:07 From Leandro Soto to Everyone:
+	mira que buena onda
+21:14:13 From Octavio Díaz Crespo to Everyone:
+	Ahí va
+21:14:19 From Leandro Soto to Everyone:
+	quedo lindo e
+21:14:19 From Romina Giménez to Everyone:
+	Reacted to "quedo lindo e" with 👾
+21:14:27 From Leandro Soto to Everyone:
+	Reacted to "quedo lindo e" with 👾
+21:14:28 From Leandro Soto to Everyone:
+	Removed a 👾 reaction from "quedo lindo e"
+21:17:58 From Leidy Uribe Marcos to Everyone:
+	si
+21:18:00 From Julio Cisneros Rosales to Everyone:
+	sip
+21:20:49 From Rolando Corral to Everyone:
+	👍
+21:20:49 From Romina Giménez to Everyone:
+	ohhh y podriamos darle una paleta de colores para que directo elija el usu?
+21:20:58 From Leandro Soto to Everyone:
+	asi es
+21:21:30 From Julio Cisneros Rosales to Everyone:
+	Excelenteee
+21:21:47 From Romina Giménez to Everyone:
+	no recuerdo jaja
+21:21:51 From Julio Cisneros Rosales to Everyone:
+	:(
+21:21:56 From Rolando Corral to Everyone:
+	ngFor y ngIF?
+21:22:11 From [TUTOR] Nicolas Temprano to Everyone:
+	Reacted to "ngFor y ngIF?" with 👏
+21:22:15 From Romina Giménez to Everyone:
+	Reacted to "ngFor y ngIF?" with 👏
+21:22:16 From Julio Cisneros Rosales to Everyone:
+	Reacted to "ngFor y ngIF?" with 🙏🏻
+21:23:14 From Juan Pardo to Everyone:
+	es mejor ng o @?
+	Entiendo que @ es mas nuevo, y no necesita estar dentro de un tag, entonces podes aplicar 2 directivas juntas (por ejemplo @if @for
+21:23:41 From Nayla Saez to Everyone:
+	Cual es la diferencia entre el ngSwitch y ngSwitchDefault ?
+21:23:57 From Julio Cisneros Rosales to Everyone:
+	Me gusta la nueva sintaxis
+21:24:09 From Nayla Saez to Everyone:
+	Reacted to "Me gusta la nueva si..." with 😊
+21:24:19 From Leandro Soto to Everyone:
+	es mas parecido a js
+21:24:20 From Romina Giménez to Everyone:
+	a mi me gusta la vieja jaja
+21:24:46 From Nayla Saez to Everyone:
+	GRACIAS
+21:25:19 From Romina Giménez to Everyone:
+	yo siento que la vieja es mas facil aplicarla, mas rapido, no se xD
+21:25:36 From [TUTOR] Nicolas Temprano to Everyone:
+	Replying to "Cual es la diferenci..."
+	
+	El primero es el contenedor, evalúa la expresión para determinar en que caso entra. El segundo es un caso por defecto. Cuando no estra en ninguno de los casos que definimos cae en el default
+21:25:39 From Rolando Corral to Everyone:
+	también depende de la versión que se use en el proyecto que estes trabajando.
+21:25:45 From Juan Pardo to Everyone:
+	No me gusta que en la vieja, si quiero poner un if dentro de un for, me pide que agregue una etiqueta adicional
+21:25:58 From [TUTOR] Nicolas Temprano to Everyone:
+	Replying to "yo siento que la vie..."
+	
+	Es cuestión de costumbre creo yo jaja
+21:26:17 From [TUTOR] Nicolas Temprano to Everyone:
+	Replying to "yo siento que la vie..."
+	
+	Una vez que empezas a utilizar seguido la nueva forma te parece más sencillo jaja
+21:27:00 From [Tutora] Sofia Altamirano to Everyone:
+	A mi me gusta mucho la nueva, pienso que queda mas ordenado sabiendo que partedel template se va a mostrar según que caso :)
+21:27:28 From Octavio Díaz Crespo to Everyone:
+	soy un simplechanges
+21:27:39 From Leidy Uribe Marcos to Everyone:
+	no podría ser ngafterview en lugar del onchange? o es por lo de changes?
+21:27:45 From Julio Cisneros Rosales to Everyone:
+	Si me gusta mas digo en las nuevas versiones se pueden usar las dos pero en un avieja version solo se puede usar la vieja xd
+21:28:12 From Romina Giménez to Everyone:
+	Replying to "yo siento que la vie..."
+	
+	sii jaja en el trabajo usamos angular 15 creo entonces verlo de otra manera me choca 😂
+21:28:23 From Pablo Sebastian to Everyone:
+	en el caso de que la key del objeto tenga -	como 'color-selected'	obj.color-selected tiraría error
+21:28:24 From Romina Giménez to Everyone:
+	Reacted to "A mi me gusta mucho ..." with 🙌
+21:28:39 From Julio Cisneros Rosales to Everyone:
+	Reacted to "A mi me gusta mucho ..." with 🙏🏻
+21:29:06 From Federico Livingston to Everyone:
+	segun lo que tengoentendido si uso punto pide la propiedad y tiene que existir si uso corchete lo trabaja como si fuese un array por eso no importa
+21:29:37 From Nayla Saez to Everyone:
+	Reacted to "en el caso de que la..." with 🙌🏼
+21:30:13 From Romina Giménez to Everyone:
+	Reacted to "en el caso de que la..." with 🙌🏼
+21:31:10 From Julio Cisneros Rosales to Everyone:
+	en infges
+21:31:10 From [TUTOR] Nicolas Temprano to Everyone:
+	Replying to "no podría ser ngafte..."
+	
+	Son dos etapas del ciclo de vida del componente. Cual sea mejor usar va a depender de que es lo que necesites realizar
+21:31:10 From Guido Pisarra to Everyone:
+	dice directiva
+21:31:16 From Julio Cisneros Rosales to Everyone:
+	ingles**
+21:31:33 From Juan Pardo to Everyone:
+	Se puede configurar en angular.ts para que no haga los tests nunca, no?
+21:31:43 From Romina Giménez to Everyone:
+	Reacted to "Se puede configurar ..." with 😯
+21:31:53 From Leidy Uribe Marcos to Everyone:
+	Reacted to "Son dos etapas del c..." with 👍
+21:33:20 From [Tutora] Sofia Altamirano to Everyone:
+	Replying to "Se puede configurar ..."
+	
+	es correcto
+21:36:09 From Romina Giménez to Everyone:
+	o sea aca cree mi propio for, pero no es que modiique el *ngFor en si mismo, fo sea creamos algo completamente nuevo, no?
+21:36:52 From Julio Cisneros Rosales to Everyone:
+	justo iba a preguntar cuantas veces
+21:36:58 From Julio Cisneros Rosales to Everyone:
+	el 1 le puso
+21:37:10 From Federico Livingston to Everyone:
+	empieza de 0
+21:37:14 From [Tutora] Sofia Altamirano to Everyone:
+	Reacted to "o sea aca cree mi pr..." with 👍🏽
+21:37:20 From Guido Pisarra to Everyone:
+	no es porque el for empieza de 0?
+21:37:23 From [TUTOR] Nicolas Temprano to Everyone:
+	Replying to "o sea aca cree mi pr..."
+	
+	Claro, creamos una nueva directiva sin modificar el ngFor
+21:37:33 From Romina Giménez to Everyone:
+	Reacted to "Claro, creamos una n..." with 👾
+21:37:42 From Federico Livingston to Everyone:
+	alcanza con ´poner < max
+21:37:59 From Leandro Soto to Everyone:
+	jajajjaja muy 10 de la noche esta la directiva
+21:38:05 From [Tutora] Sofia Altamirano to Everyone:
+	Reacted to "jajajjaja muy 10 de ..." with 😂
+21:38:05 From Romina Giménez to Everyone:
+	Reacted to "jajajjaja muy 10 de ..." with 😂
+21:38:10 From Nicolás Pradenas to Everyone:
+	quizás funcione así porque está repitiendo el que ya está creado?
+21:38:38 From Federico Livingston to Everyone:
+	no es < solo
+21:38:43 From Octavio Díaz Crespo to Everyone:
+	Reacted to "jajajjaja muy 10 de ..." with 😂
+21:39:13 From Julio Cisneros Rosales to Everyone:
+	Como le fue el dia de hoy ?
+21:39:23 From Octavio Díaz Crespo to Everyone:
+	Momento terapia
+21:39:25 From Nicolás Pradenas to Everyone:
+	es que ya está el título Usuarios antes o no?
+21:39:31 From Romina Giménez to Everyone:
+	Reacted to "Momento terapia" with 👾
+21:39:40 From Romina Giménez to Everyone:
+	como un reset?
+21:39:51 From Leandro Soto to Everyone:
+	ahora si
+21:40:36 From Julio Cisneros Rosales to Everyone:
+	Porque clear en el viewContainer ?
+21:40:36 From Rolando Corral to Everyone:
+	take a break?
+21:40:45 From Romina Giménez to Everyone:
+	Reacted to "take a break?" with ❤️
+21:40:45 From Nayla Saez to Everyone:
+	Te bancamos profe
+21:40:52 From Leandro Soto to Everyone:
+	queda poco para el viernes ya
+21:41:08 From Romina Giménez to Everyone:
+	mal haha yo no se ni como sigo viva todavia xD
+21:41:22 From Profesor Coderhouse to Everyone:
+	https://github.com/josuebaez61/pf-baez-59435.git
+21:41:23 From Leandro Soto to Everyone:
+	3 hs es muy poco
+21:41:26 From Leandro Soto to Everyone:
+	para dormir
+21:41:29 From Julio Cisneros Rosales to Everyone:
+	tomese un mate
+21:42:30 From Rolando Corral to Everyone:
+	música de asensor
+21:45:22 From Profesor Coderhouse to Everyone:
+	voten jaja
+21:45:46 From Leonardo Cantarini to Everyone:
+	Reacted to "música de asensor" with 😂
+21:46:22 From Romina Giménez to Everyone:
+	Replying to "música de asensor"
+	
+	no se si la sobrevivo haha necesitaba esto anoche que me desvele y recien tipo 7am me dio sueño xD
+21:46:31 From Octavio Díaz Crespo to Everyone:
+	yo con sueño
+21:46:32 From Octavio Díaz Crespo to Everyone:
+	y ponen lofi
+21:46:33 From Romina Giménez to Everyone:
+	Reacted to "y ponen lofi" with 😂
+21:46:38 From Romina Giménez to Everyone:
+	Reacted to "voten jaja" with 😂
+21:46:42 From Romina Giménez to Everyone:
+	Removed a 😂 reaction from "y ponen lofi"
+21:46:45 From Romina Giménez to Everyone:
+	Reacted to "y ponen lofi" with 👾
+21:46:45 From Profesor Coderhouse to Everyone:
+	jajajjaja perdón!
+21:46:58 From Octavio Díaz Crespo to Everyone:
+	Reacted to "jajajjaja perdón!" with ❤️
+21:47:28 From Romina Giménez to Everyone:
+	cuantos somos que todavia no tomamos agua en el dia? xD
+21:47:29 From Nicolás Pradenas to Everyone:
+	uufff que temazo
+21:47:38 From Nicolás Pradenas to Everyone:
+	referencias jajaja
+21:47:42 From Leandro Soto to Everyone:
+	Reacted to "cuantos somos que to..." with 🤯
+21:47:45 From Octavio Díaz Crespo to Everyone:
+	Replying to "cuantos somos que to..."
+	
+	como no vas a tomar agua
+21:47:53 From Romina Giménez to Everyone:
+	Replying to "cuantos somos que to..."
+	
+	se me olvida hahaha
+21:47:53 From Julio Cisneros Rosales to Everyone:
+	jajajaja
+21:47:55 From Octavio Díaz Crespo to Everyone:
+	Replying to "cuantos somos que to..."
+	
+	te va hacer mal romina
+21:48:06 From Leandro Soto to Everyone:
+	claro
+21:48:08 From Nicolás Pradenas to Everyone:
+	Replying to "cuantos somos que to..."
+	
+	RIP riñones
+21:48:09 From Leandro Soto to Everyone:
+	me pasa lo mismo
+21:48:10 From Maximiliano Leurino to Everyone:
+	mate 0 profe?
+21:48:10 From Romina Giménez to Everyone:
+	Reacted to "te va hacer mal romi..." with 👾
+21:48:13 From Romina Giménez to Everyone:
+	Reacted to "RIP riñones" with 😂
+21:48:17 From Maximiliano Leurino to Everyone:
+	ahh
+21:48:18 From Octavio Díaz Crespo to Everyone:
+	Replying to "cuantos somos que to..."
+	
+	Cuando escribo código me da sed imaginate
+21:48:32 From Romina Giménez to Everyone:
+	si fuese por mi viviria a cafe, pero no me dejan xD
+21:48:32 From Leandro Soto to Everyone:
+	si tomo mate ahora no me duermo
+21:48:33 From Matias Candeloro to Everyone:
+	la taza de café también la tenes que limpiar xD
+21:48:34 From Nicolás Pradenas to Everyone:
+	yo me acabo de terminar el termo con mate xd
+21:48:37 From Fernando Ledesma Sánchez to Everyone:
+	mate y amargo por supuesto
+21:48:42 From Romina Giménez to Everyone:
+	Reacted to "Cuando escribo códig..." with 😂
+21:48:43 From Javier Fain to Everyone:
+	el café es para sobrevivir en la vida, el mate es para sociabilizar :D
+21:48:47 From Romina Giménez to Everyone:
+	Replying to "cuantos somos que to..."
+	
+	pasame un poco hahaha
+21:48:51 From Guido Pisarra to Everyone:
+	creo que si pudiera, tomaría mate mientras duermo...
+21:48:51 From Octavio Díaz Crespo to Everyone:
+	y si le pongo café al mate estoy tomando café mate y agua ?
+21:48:59 From Julio Cisneros Rosales to Everyone:
+	yo prefiero un monster pa dormir
+21:49:03 From Leandro Soto to Everyone:
+	Replying to "el café es para sobr..."
+	
+	no hay nada como tomar mate solo
+21:49:14 From Javier Fain to Everyone:
+	Replying to "cuantos somos que to..."
+	
+	hay que tomar 2L por día
+21:49:17 From Nicolás Pradenas to Everyone:
+	Replying to "el café es para sobr..."
+	
+	confirmo lo de tomar mate solo
+21:49:24 From Leandro Soto to Everyone:
+	yo tengo la pava
+21:49:26 From Rolando Corral to Everyone:
+	Reacted to "yo tengo la pava" with 🙌
+21:49:27 From Romina Giménez to Everyone:
+	yo me compre una cantimploira re linda, me funciono un tiempo y luego solo queda ahi vacia xD
+21:49:27 From Leandro Soto to Everyone:
+	en mi setup
+21:49:34 From Javier Fain to Everyone:
+	Replying to "el café es para sobr..."
+	
+	también, obvio jaja
+21:49:34 From Leandro Soto to Everyone:
+	no puedo pedir mas
+21:49:42 From [Tutora] Sofia Altamirano to Everyone:
+	nadie votó té?
+21:49:43 From Romina Giménez to Everyone:
+	Reacted to "el café es para sobr..." with ❤️
+21:49:50 From Romina Giménez to Everyone:
+	siii tenes que levantarte ahhahaha
+21:49:51 From Javier Fain to Everyone:
+	llenarla :D
+21:50:10 From Julio Cisneros Rosales to Everyone:
+	y antojitos de medianoche, que le gusta comer profe ?
+21:50:13 From Romina Giménez to Everyone:
+	esta bueno eso
+21:50:39 From Javier Fain to Everyone:
+	esa es la CENA??
+21:50:45 From Javier Fain to Everyone:
+	ah ajaj
+21:50:48 From Romina Giménez to Everyone:
+	Reacted to "ah ajaj" with 😂
+21:50:49 From Javier Fain to Everyone:
+	tentempié
+21:51:07 From Leandro Soto to Everyone:
+	a que hora arranca manana?
+21:51:08 From Leandro Soto to Everyone:
+	muy temprano?
+21:51:30 From Julio Cisneros Rosales to Everyone:
+	ufff con la pijama pa
+21:51:33 From Leandro Soto to Everyone:
+	jajajajaja lo hacemos todo
+21:51:37 From Leandro Soto to Everyone:
+	todos
+21:51:43 From Romina Giménez to Everyone:
+	Replying to "todos"
+	
+	re xD
+21:52:14 From Romina Giménez to Everyone:
+	Replying to "y antojitos de media..."
+	
+	lo mejor es tostada con cacao en polvo
+21:52:22 From Nicolás Pradenas to Everyone:
+	un café y un pan y listo para funcionar toda la mañana: best desayuno
+21:52:24 From Javier Fain to Everyone:
+	para los que remotean, recomiendo fortísimo cambiarse como si "fueran a salir"
+21:52:27 From Javier Fain to Everyone:
+	cambia las energías
+21:52:37 From [Tutora] Sofia Altamirano to Everyone:
+	Reacted to "para los que remotea..." with 😂
+21:52:41 From Romina Giménez to Everyone:
+	Reacted to "para los que remotea..." with 😂
+21:52:43 From Julio Cisneros Rosales to Everyone:
+	Replying to "y antojitos de media..."
+	
+	ufffff, para codear a las 3:33 am
+21:52:44 From [Tutora] Sofia Altamirano to Everyone:
+	Replying to "para los que remotea..."
+	
+	not today
+21:52:55 From Leandro Soto to Everyone:
+	no sabia
+21:52:55 From Romina Giménez to Everyone:
+	Reacted to "ufffff, para codear ..." with ❤️
+21:52:57 From Leandro Soto to Everyone:
+	como se llama?
+21:53:02 From Leandro Soto to Everyone:
+	Aioni?
+21:53:02 From Profesor Coderhouse to Everyone:
+	ionic
+21:53:02 From Julio Cisneros Rosales to Everyone:
+	usted es fullstack ?
+21:53:03 From Javier Fain to Everyone:
+	Reacted to "not today" with 😅
+21:53:07 From Leandro Soto to Everyone:
+	ahi va
+21:53:10 From Leandro Soto to Everyone:
+	investigare
+21:53:19 From Javier Fain to Everyone:
+	Replying to "para los que remotea..."
+	
+	después de las 20 hs vale todo
+21:53:22 From Maximiliano Leurino to Everyone:
+	te gusta mas angular que react?
+21:53:25 From Nayla Saez to Everyone:
+	Reacted to "para los que remotea..." with 😂
+21:53:29 From Nayla Saez to Everyone:
+	Reacted to "not today" with 😅
+21:53:38 From Julio Cisneros Rosales to Everyone:
+	React si o no ?
+21:54:00 From [Tutora] Sofia Altamirano to Everyone:
+	Replying to "para los que remotea..."
+	
+	mi ropa de trabajar es un poco mejor que la ropa de entrecasa y eso es todo jaja
+21:54:03 From Romina Giménez to Everyone:
+	en mi trabajo usan .net
+21:54:14 From Pablo Sebastian to Everyone:
+	infra también como full stack?
+21:54:24 From Nicolás Pradenas to Everyone:
+	en mi empresa usamos spring boot
+21:54:26 From Octavio Díaz Crespo to Everyone:
+	y node.js?
+21:54:34 From Profesor Coderhouse to Everyone:
+	NestJS
+21:54:41 From Julio Cisneros Rosales to Everyone:
+	Replying to "en mi empresa usamos..."
+	
+	Eres FotnEnd ?
+21:54:49 From Julio Cisneros Rosales to Everyone:
+	Replying to "en mi empresa usamos..."
+	
+	FrontEnd*
+21:54:53 From [TUTOR] Nicolas Temprano to Everyone:
+	Replying to "en mi empresa usamos..."
+	
+	Spring es de back
+21:55:05 From Julio Cisneros Rosales to Everyone:
+	Replying to "en mi empresa usamos..."
+	
+	aaaaa sorry
+21:55:17 From [TUTOR] Nicolas Temprano to Everyone:
+	Replying to "en mi empresa usamos..."
+	
+	Jajaja nada que disculpar
+21:55:17 From Nicolás Pradenas to Everyone:
+	Replying to "en mi empresa usamos..."
+	
+	Se supone que soy full-stack pero en front bien gracias xD
+21:55:20 From Javier Fain to Everyone:
+	donde vivis, profe?
+21:55:24 From Romina Giménez to Everyone:
+	Replying to "en mi empresa usamos..."
+	
+	lo veo mucho en videos de youtube este
+21:55:26 From [Tutora] Sofia Altamirano to Everyone:
+	Replying to "en mi empresa usamos..."
+	
+	Es para java
+21:55:45 From Julio Cisneros Rosales to Everyone:
+	Replying to "en mi empresa usamos..."
+	
+	oooooo, wow, el desarrollo es un mundazo
+21:55:52 From Julio Cisneros Rosales to Everyone:
+	Replying to "en mi empresa usamos..."
+	
+	incredible
+21:56:02 From Nicolás Pradenas to Everyone:
+	Replying to "en mi empresa usamos..."
+	
+	acá en Chile se busca mucho fullstack con Spring y Angular
+21:56:45 From Julio Cisneros Rosales to Everyone:
+	Ya es pre entrega??
+21:56:47 From Nicolás Pradenas to Everyone:
+	por favor avancemos en el proyecto, el mio se está cayendo a pedazos xD
+21:56:51 From Julio Cisneros Rosales to Everyone:
+	Que miedo
+21:56:59 From Juan Pardo to Everyone:
+	Profe, a partir de lo que explicaste de los ciclos de vida:
+	Angular no es como React en el sentido que detecta automáticamente los cambios y re renderiza?
+21:57:42 From Julio Cisneros Rosales to Everyone:
+	Reacted to "por favor avancemos ..." with 😂
+21:58:28 From Julio Cisneros Rosales to Everyone:
+	Reacted to "después de las 20 hs..." with 😂
+22:00:08 From Juan Pardo to Everyone:
+	baja logica?
+22:00:10 From Javier Fain to Everyone:
+	la entrega tiene que ser si o si sobre alumnos y ese "tema" digamos?
+22:00:26 From Federico Livingston to Everyone:
+	la funcionalidad del sidebar tiene que ser la que vimos o puede ser estatica?
+22:00:27 From [TUTOR] Nicolas Temprano to Everyone:
+	Replying to "la entrega tiene que..."
+	
+	Si Javi
+22:00:29 From [Tutora] Sofia Altamirano to Everyone:
+	Replying to "la entrega tiene que..."
+	
+	Si, es una institución educativa
+22:00:33 From Javier Fain to Everyone:
+	Replying to "la entrega tiene que..."
+	
+	perfecto
+22:00:38 From Javier Fain to Everyone:
+	Replying to "la entrega tiene que..."
+	
+	gracias!
+22:00:43 From Federico Livingston to Everyone:
+	estatica
+22:00:49 From Federico Livingston to Everyone:
+	que no se vaya
+22:02:20 From Romina Giménez to Everyone:
+	si o si tiene que ser 20? o con que cambie el tamaño alcanza?
+22:02:33 From Romina Giménez to Everyone:
+	ohh ahha
+22:02:48 From Octavio Díaz Crespo to Everyone:
+	buenísimo no me gustaba boostrap
+22:03:01 From Romina Giménez to Everyone:
+	Reacted to "buenísimo no me gust..." with 😂
+22:03:42 From Federico Livingston to Everyone:
+	dice que boot es obligatorio al final es obligatorio u opcional?
+22:03:47 From Leidy Uribe Marcos to Everyone:
+	si bootstrap es opcional podría incluir otro framework de diseño o solo es bootstrap?
+22:04:36 From Octavio Díaz Crespo to Everyone:
+	gracias a dios
+22:04:40 From Octavio Díaz Crespo to Everyone:
+	nooo
+22:04:49 From Javier Fain to Everyone:
+	Reacted to "nooo" with 😅
+22:04:52 From Nicolás Pradenas to Everyone:
+	podría servir bootstrap para el grid?
+22:04:56 From Romina Giménez to Everyone:
+	Reacted to "nooo" with 😅
+22:06:03 From [Tutora] Sofia Altamirano to Everyone:
+	Reacted to "podría servir bootst..." with 👍🏽
+22:08:42 From Leandro Soto to Everyone:
+	profe en nuetra plataforma deberiamos tener un campo para asignar un alumno a un curso cierto?
+22:09:07 From Leandro Soto to Everyone:
+	puede ser un select
+22:09:46 From Leandro Soto to Everyone:
+	Ah genial
+22:10:40 From Javier Fain to Everyone:
+	qué comando usas para escribir lo mismo en varios lugares distintos?
+22:10:48 From Octavio Díaz Crespo to Everyone:
+	la tecla alt
+22:10:50 From Leandro Soto to Everyone:
+	alt
+22:11:06 From Javier Fain to Everyone:
+	uh que genial
+22:11:10 From Octavio Díaz Crespo to Everyone:
+	+ f4
+22:11:17 From Romina Giménez to Everyone:
+	pero cambia segun el o.s. igual a veces, en linux a veces el cntrl queda medio defectuosito xD
+22:11:18 From Leandro Soto to Everyone:
+	Reacted to "pero cambia segun el..." with 🤣
+22:11:19 From Leandro Soto to Everyone:
+	Removed a 🤣 reaction from "pero cambia segun el..."
+22:11:24 From Javier Fain to Everyone:
+	Reacted to "pero cambia segun el..." with ❤️
+22:11:27 From Leandro Soto to Everyone:
+	Reacted to "+ f4" with 🤣
+22:11:37 From Guido Pisarra to Everyone:
+	Reacted to "+ f4" with 😂
+22:11:56 From Leandro Soto to Everyone:
+	es valido
+22:12:40 From Leandro Soto to Everyone:
+	claro si
+22:13:22 From Federico Livingston to Everyone:
+	es valido
+22:14:13 From Octavio Díaz Crespo to Everyone:
+	que significa ABM
+22:14:18 From Octavio Díaz Crespo to Everyone:
+	?
+22:14:21 From Romina Giménez to Everyone:
+	y en esta entrega tendriamos que hacer que qeude guardado en el tabla?
+22:14:22 From Leandro Soto to Everyone:
+	ahora es rellenar la tabla con esos datos
+22:14:58 From Guido Pisarra to Everyone:
+	Replying to "que significa ABM"
+	
+	Es Alta Baja Modificación
+22:15:04 From Octavio Díaz Crespo to Everyone:
+	el usuario nunca sabe nada, ni escribir bien un mail
+22:15:08 From Octavio Díaz Crespo to Everyone:
+	Reacted to "Es Alta Baja Modific..." with ❤️
+22:15:24 From Javier Fain to Everyone:
+	Reacted to "el usuario nunca sab..." with 😆
+22:15:26 From Romina Giménez to Everyone:
+	Replying to "el usuario nunca sab..."
+	
+	nosotros recibimos todo el tiempo mensajes de "no entiendo como ingresar en la plataforma" jajaja
+22:15:35 From Octavio Díaz Crespo to Everyone:
+	Reacted to "nosotros recibimos t..." with 😅
+22:15:51 From Octavio Díaz Crespo to Everyone:
+	Replying to "el usuario nunca sab..."
+	
+	tentador responderle con un " que pena "
+22:15:58 From Romina Giménez to Everyone:
+	Reacted to "tentador responderle..." with 😂
+22:16:43 From [Tutora] Sofia Altamirano to Everyone:
+	Replying to "el usuario nunca sab..."
+	
+	mi team leader siempre dice que hay que asumir que el usuario es estúpido ajaja
+22:16:48 From Romina Giménez to Everyone:
+	Replying to "el usuario nunca sab..."
+	
+	yo pienso que capaz es un viejito/viejita y se me pasa jaja
+22:16:54 From Romina Giménez to Everyone:
+	Reacted to "mi team leader siemp..." with 😂
+22:16:56 From [Tutora] Sofia Altamirano to Everyone:
+	Replying to "el usuario nunca sab..."
+	
+	perdonando la expresión pero es textual
+22:17:10 From Javier Fain to Everyone:
+	Reacted to "mi team leader siemp..." with 😂
+22:17:15 From Javier Fain to Everyone:
+	Reacted to "yo pienso que capaz ..." with 😅
+22:17:18 From Leandro Soto to Everyone:
+	Reacted to "mi team leader siemp..." with 😂
+22:17:19 From Octavio Díaz Crespo to Everyone:
+	Replying to "el usuario nunca sab..."
+	
+	@[Tutora] Sofia Altamirano 	no es un hecho ?
+22:17:21 From [Tutora] Sofia Altamirano to Everyone:
+	Replying to "el usuario nunca sab..."
+	
+	@Romina Giménez hay que tener siempre presente la accesibilidad
+22:17:29 From Romina Giménez to Everyone:
+	Reacted to "@Romina Giménez hay ..." with ❤️
+22:17:49 From Octavio Díaz Crespo to Everyone:
+	Reacted to "mi team leader siemp..." with 😂
+22:19:13 From [Tutora] Sofia Altamirano to Everyone:
+	Reacted to "@[Tutora] Sofia Alta..." with 😂
+22:19:28 From Leandro Soto to Everyone:
+	math random
+22:19:30 From Leandro Soto to Everyone:
+	no?
+22:19:47 From Romina Giménez to Everyone:
+	Replying to "el usuario nunca sab..."
+	
+	sii igual a veces incluso asi no se logra, la accesibilidad para mi es clave pero tambien requerimos paciencia (para viejitos/as pero tambien para personas bien jovenes que capaz no usaron pc en su adolescencia y no son muy techs
+22:19:58 From Rolando Corral to Everyone:
+	es muy complicado agregar uuid?
+22:20:52 From Leandro Soto to Everyone:
+	nuestro mejor amigo chat
+22:21:05 From Leandro Soto to Everyone:
+	es profe, tutor, jefe lo que quieras 24 hs
+22:21:06 From [Tutora] Sofia Altamirano to Everyone:
+	Replying to "es muy complicado ag..."
+	
+	hay que instalarlo cual librería por npm
+22:21:13 From [Tutora] Sofia Altamirano to Everyone:
+	Reacted to "es profe, tutor, jef..." with 😂
+22:21:35 From Rolando Corral to Everyone:
+	Reacted to "hay que instalarlo c..." with 👍
+22:21:59 From Rolando Corral to Everyone:
+	👍
+22:22:01 From Leidy Uribe Marcos to Everyone:
+	puede explicarlo
+22:22:03 From Leandro Soto to Everyone:
+	si, se entiend
+22:22:20 From Fernando Ledesma Sánchez to Everyone:
+	no falto el pipe date?
+22:23:45 From [Tutora] Sofia Altamirano to Everyone:
+	para los que preguntan el profe es de libra 😂
+22:24:16 From Octavio Díaz Crespo to Everyone:
+	♑ > *
+22:24:27 From Guido Pisarra to Everyone:
+	Reacted to "para los que pregunt..." with 😂
+22:24:34 From [Tutora] Sofia Altamirano to Everyone:
+	Reacted to "♑ > *" with 😂
+22:25:01 From Romina Giménez to Everyone:
+	lo habia mencionado en clases previas no? esto de los ... , o era otra cosa?
+22:25:15 From Matias Candeloro to Everyone:
+	aguante doko!
+22:25:26 From Nicolás Pradenas to Everyone:
+	como no jajaja
+22:25:34 From Octavio Díaz Crespo to Everyone:
+	yo veía astro boy
+22:26:19 From Leidy Uribe Marcos to Everyone:
+	genial
+22:26:45 From Romina Giménez to Everyone:
+	Replying to "lo habia mencionado ..."
+	
+	okis por las dudas miro porque no recuerdo qeu era haha
+22:26:54 From Federico Livingston to Everyone:
+	ok el alta podras agregar la modificacion para ver como se arman dos forms a la vez
+22:27:18 From Juan Pardo to Everyone:
+	no hace falta usar localstorage para la entrega?
+22:27:39 From [TUTOR] Nicolas Temprano to Everyone:
+	Replying to "no hace falta usar l..."
+	
+	Para esta primera entrega no es necesario que utilicen el localstorage
+22:28:42 From Romina Giménez to Everyone:
+	el modo noche se haria con directiva o se hace de otra manera eso?
+22:29:02 From Leandro Soto to Everyone:
+	y el edit?
+22:31:20 From [TUTOR] Nicolas Temprano to Everyone:
+	Replying to "el modo noche se har..."
+	
+	Hay varias formas de implementar un modo oscuro, entre esos podes utilizar una directiva como bien decis. De todas formas no se compliquen con eso a menos que estén muy bien con el avance de su proyecto
+22:31:44 From Julio Cisneros Rosales to Everyone:
+	me aparece un error
+22:31:49 From [TUTOR] Nicolas Temprano to Everyone:
+	Replying to "el modo noche se har..."
+	
+	Primero prioricen las cosas solicitadas en la rubrica y luego pueden ponerlo bonito jaja
+22:32:07 From Romina Giménez to Everyone:
+	Replying to "el modo noche se har..."
+	
+	sii obvio haha era curiosidad solo 👾
+22:33:55 From Nicolás Pradenas to Everyone:
+	habría que crear un input hidden para el identificador en el modal?
+22:34:02 From [TUTOR] Nicolas Temprano to Everyone:
+	Replying to "{109A23A5-1E4B-4742-9F18-888AC7E7B91B}.png"
+	
+	Podrías pasar una foto de como tenes el código'
+22:36:06 From Romina Giménez to Everyone:
+	me habia quedado esa duda, entonces si es private solo queda en el ts y no puede salir de ese ts?
+22:36:30 From Octavio Díaz Crespo to Everyone:
+	q maesrto
+22:36:50 From Julio Cisneros Rosales to Everyone:
+	Replying to "{109A23A5-1E4B-4742-9F18-888AC7E7B91B}.png"
+	
+	Ya lo pude resolver :D
+22:37:00 From [Tutora] Sofia Altamirano to Everyone:
+	Replying to "me habia quedado esa..."
+	
+	https://lenguajesdeprogramacion.net/diccionario/diferencia-entre-public-protected-o-private/
+22:37:08 From Romina Giménez to Everyone:
+	ahhhhhh
+22:37:21 From Federico Livingston to Everyone:
+	si grabas no actualiza va a crear uno igual
+22:37:26 From Romina Giménez to Everyone:
+	Reacted to "https://lenguajesdep..." with ❤️
+22:39:28 From Federico Livingston to Everyone:
+	deja vu de react jajajajaja
+22:40:09 From Julio Cisneros Rosales to Everyone:
+	un crud
+22:40:19 From Leandro Soto to Everyone:
+	de lujo
+22:40:23 From José Castañeda Piña to Everyone:
+	pero el id no deberia de cambiar no?
+22:41:25 From Federico Livingston to Everyone:
+	lo mismo para la fecha
+22:44:27 From Juan Pardo to Everyone:
+	Hay una estructura json para alumnos que vayas a usar mas adelante para mockup o testing? 
+	Asi ya diseñamos teniéndo en cuenta ese formato
+22:45:20 From Romina Giménez to Everyone:
+	el map es siempre secuencial? hay alguna ocasión en que no convenga hacerlo con map? (no se igual si hay alguna otra manera de hacerlo)
+22:46:03 From [Tutora] Sofia Altamirano to Everyone:
+	Recuerden que la asistencia puede demorar hasta 48hs en impactar en la plataforma
+22:46:08 From [TUTOR] Nicolas Temprano to Everyone:
+	Replying to "Hay una estructura j..."
+	
+	Más adelante vamos a usar un mockup pero no hay una estructura definida por nosotros. Eso lo van a definir ustedes según lo que vayan necesitando y los requerimientos del proyecto
+22:46:56 From Romina Giménez to Everyone:
+	ohhh claro genial
+22:47:43 From Rolando Corral to Everyone:
+	hasta la próxima 👋
+22:47:50 From Federico Livingston to Everyone:
+	de luxe buenas noches
+22:47:51 From Romina Giménez to Everyone:
+	muchas gracias!
+22:47:54 From Fernando Ledesma Sánchez to Everyone:
+	chau chau
+22:47:55 From Matias Candeloro to Everyone:
+	gracias, buenas noches
+22:47:57 From Nicolás Pradenas to Everyone:
+	hasta la próxima clase
+22:48:07 From [Tutora] Sofia Altamirano to Everyone:
+	Nos vemos!
+22:48:07 From Profesor Coderhouse to Everyone:
+	https://github.com/josuebaez61/pf-baez-59435.git
+22:48:12 From Leonardo Cantarini to Everyone:
+	Buenisimo, mucha gracias, hasta el lunes
+22:48:14 From Octavio Díaz Crespo to Everyone:
+	graciiiiias

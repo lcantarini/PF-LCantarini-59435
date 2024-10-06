@@ -1,0 +1,574 @@
+20:37:46 From [TUTOR] Nicolas Temprano to Everyone:
+	Replying to "a ustedes profes cua..."
+	
+	Yo te recomendaría que los vayas probando y veas cual te resulta más cómodo a vos, cada uno tiene su pro y contra
+20:38:04 From Profesor Coderhouse to Everyone:
+	https://ng-bootstrap.github.io/#/home
+20:38:14 From Eduardo Vazzoler to Everyone:
+	PrimeNG
+20:38:18 From [TUTOR] Nicolas Temprano to Everyone:
+	Replying to "a ustedes profes cua..."
+	
+	Yo utilizo Bootstrap pero porque es el dado en mi trabajo. No tuve elección jajaja
+20:38:29 From Eduardo Vazzoler to Everyone:
+	Tailwind
+20:38:36 From Profesor Coderhouse to Everyone:
+	https://primeng.org/
+20:39:08 From Octavio Díaz Crespo to Everyone:
+	a pero primeng esta buenaso
+20:39:10 From Romina Giménez to Everyone:
+	buenisimo!
+20:39:23 From Romina Giménez to Everyone:
+	Replying to "a ustedes profes cua..."
+	
+	jaja gracias!
+20:39:42 From Profesor Coderhouse to Everyone:
+	https://material.angular.io/
+20:41:33 From Julio Cisneros Rosales to Everyone:
+	Un rosa
+20:42:10 From Romina Giménez to Everyone:
+	profe la custom se puede elegir el tema base?
+	por ejemplo quiero poder customizar pero en base al verdecito que viene por default
+20:42:36 From Octavio Díaz Crespo to Everyone:
+	si a todo
+20:42:47 From Romina Giménez to Everyone:
+	ahhh okii
+20:43:07 From Federico Livingston to Everyone:
+	podes pasar el comando para instalarlo porfa
+20:43:26 From Profesor Coderhouse to Everyone:
+	ng add @angular/material
+20:45:16 From Profesor Coderhouse to Everyone:
+	hediet.vscode-drawio
+20:48:05 From Federico Livingston to Everyone:
+	el loginb es para los alumnos? pense que era para el administrador
+20:48:51 From Nicolás Pradenas to Everyone:
+	pero eso sería para un perfil administrador/profesor? digo porque el alumno puede ver sus cursos inscritos y poco más
+20:49:36 From Sebastián Ortiz to Everyone:
+	consulta sobre esa arquitectura, el dashboard administrativo no deberia estar dentro del auth module? porque seria posterior al logeo
+20:50:36 From [TUTOR] Nicolas Temprano to Everyone:
+	Replying to "consulta sobre esa a..."
+	
+	No Seba. Porque el auth se encarga de validar y luego delega la responsabilidad de mostrar el contenido adashboard
+20:50:38 From [Tutora] Sofia Altamirano to Everyone:
+	Replying to "el loginb es para lo..."
+	
+	Ya vamos a llegar a eso, más adelante va a ser parte de los requerimientos el login con perfiles
+20:51:35 From Juan Pardo to Everyone:
+	pero el Dashboard es único, no? Porque es un solo rol que vamos a manejar?
+20:51:37 From Romina Giménez to Everyone:
+	ohhh claro entonces el module.ts lo que hace es darme como una primer ruta padre?
+20:51:46 From Sebastián Ortiz to Everyone:
+	Replying to "consulta sobre esa a..."
+	
+	perfecto! gracias!!
+20:51:51 From Federico Livingston to Everyone:
+	usuarios deberia ir en auth
+20:51:55 From Julio Cisneros Rosales to Everyone:
+	seria un /
+20:52:12 From Federico Livingston to Everyone:
+	porque son los usuarios que pueden acceder para administrar
+20:52:22 From Romina Giménez to Everyone:
+	genial
+20:52:22 From Sebastián Ortiz to Everyone:
+	Replying to "ohhh claro entonces ..."
+	
+	me sirvio esta consulta para terminar de entenderlo jaja 👍
+20:52:37 From Nicolás Pradenas to Everyone:
+	esta clase está más enfocada al dashboard entonces? digo porque todavía no vemos nada de routing 😅
+20:52:46 From Pablo Sebastian to Everyone:
+	para el login vamos a tener un back y una db?
+20:53:15 From Julio Cisneros Rosales to Everyone:
+	Entonces vamos a tener varias carpetas asi como de models el de routes y asi ?
+20:53:26 From [Tutora] Sofia Altamirano to Everyone:
+	Replying to "esta clase está más ..."
+	
+	Si el routing está mas adelante
+20:53:26 From Octavio Díaz Crespo to Everyone:
+	se vienen cositas
+20:53:30 From [TUTOR] Nicolas Temprano to Everyone:
+	Replying to "usuarios deberia ir ..."
+	
+	Depende que es lo que quieras hacer con usuarios. Si queres ver tu perfil no. Puede ir en dashboard
+20:53:59 From [TUTOR] Nicolas Temprano to Everyone:
+	Replying to "usuarios deberia ir ..."
+	
+	El auth se va a encargar únicamente de validar usuario y contraseña en caso del login o de crear una cuenta en el caso del registro
+20:54:00 From [Tutora] Sofia Altamirano to Everyone:
+	Replying to "pero el Dashboard es..."
+	
+	Si, solo que diferentes roles pueden hacer diferentes cosas
+20:54:19 From [Tutora] Sofia Altamirano to Everyone:
+	Reacted to "se vienen cositas" with 😂
+20:54:51 From [TUTOR] Nicolas Temprano to Everyone:
+	Replying to "Entonces vamos a ten..."
+	
+	Depende un poco de cómo quieras estructurar el proyecto las carpetas. Si vas a tener varios archivos de módulos
+20:55:02 From Romina Giménez to Everyone:
+	Reacted to "me sirvio esta consu..." with 🌟
+20:55:25 From Profesor Coderhouse to Everyone:
+	ng generate module features/auth --routing
+20:56:20 From [Tutora] Sofia Altamirano to Everyone:
+	Replying to "para el login vamos ..."
+	
+	en el curso vamos a trabajar con una librería que simularía la bbdd
+20:56:55 From Leandro Soto to Everyone:
+	consulta, estoy mas acostumbrado a angular 16, las entregas deben ser en la ultima version? o puedo utilizar la 16?
+20:57:16 From Julio Cisneros Rosales to Everyone:
+	que es routing?
+20:58:36 From [Tutora] Sofia Altamirano to Everyone:
+	Replying to "consulta, estoy mas ..."
+	
+	Podés usar la 16. De todos modos si subieras a la 17/18 solo deberías usar el flag --no-standalone
+20:58:36 From Leandro Soto to Everyone:
+	Es una mala practica utilizar un modulo por feature?
+20:58:42 From Julio Cisneros Rosales to Everyone:
+	aaaaa ok, :DDDD
+20:58:48 From Leandro Soto to Everyone:
+	Replying to "consulta, estoy mas ..."
+	
+	Gracias sofi
+20:58:49 From [Tutora] Sofia Altamirano to Everyone:
+	Replying to "Es una mala practica..."
+	
+	No de hecho es lo recomendado
+20:58:57 From Cristian Aquino to Everyone:
+	En la entrega del trabajo final tiene que estar las carpetas en ingles? O las puedo crear en español los nombres??
+20:59:18 From Juan Pardo to Everyone:
+	Replying to "Es una mala practica..."
+	
+	la S de SOLID
+	Single REsponsability
+20:59:34 From Javier Fain to Everyone:
+	SPANGLISH
+20:59:34 From Octavio Díaz Crespo to Everyone:
+	es un código bilingue
+20:59:35 From Nicolás Pradenas to Everyone:
+	no spanglish, entendido
+20:59:42 From Javier Fain to Everyone:
+	😆
+20:59:48 From Cristian Aquino to Everyone:
+	Ahh dale, gracias. Sisi, yo estoy acostumbrado a todo español por eso 😅
+21:00:29 From [Tutora] Sofia Altamirano to Everyone:
+	Reacted to "Ahh dale, gracias. S..." with 👍🏽
+21:00:35 From [Tutora] Sofia Altamirano to Everyone:
+	Reacted to "no spanglish, entend..." with 👍🏽
+21:00:36 From Profesor Coderhouse to Everyone:
+	ng generate component features/dashboard --skip-tests
+21:01:41 From Octavio Díaz Crespo to Everyone:
+	va
+21:02:33 From Leandro Soto to Everyone:
+	importar el modulo
+21:02:35 From [Tutora] Sofia Altamirano to Everyone:
+	Reacted to "Gracias sofi" with ❤️
+21:02:40 From Romina Giménez to Everyone:
+	hay que meterlo en el ts?
+21:02:51 From Leandro Soto to Everyone:
+	en el module .ts
+21:02:52 From Octavio Díaz Crespo to Everyone:
+	app.modue
+21:02:54 From Romina Giménez to Everyone:
+	app
+21:02:56 From Leidy Uribe Marcos to Everyone:
+	General app.module
+21:04:13 From Tomás Redona to Everyone:
+	profe puede explicarlo de vuelta por favor
+21:04:18 From Tomás Redona to Everyone:
+	que no estaba
+21:04:21 From Julio Cisneros Rosales to Everyone:
+	Si porfavor
+21:04:29 From Octavio Díaz Crespo to Everyone:
+	importar el modulo y exportar el componente ok
+21:04:36 From Leonardo Cantarini to Everyone:
+	Profe, necesitamos que lo dejes un seg por lo menos
+21:04:49 From Nicolas Pagola to Everyone:
+	Claro no se llega a ver la pantalla
+21:05:01 From Octavio Díaz Crespo to Everyone:
+	claro
+21:07:08 From Leandro Soto to Everyone:
+	Lo bueno de esta funcionalidad de Angular, es que importando el module (la caja), importas todo su contenido. Si no, deberias importar cada uno de los componentes.
+21:07:25 From Leonardo Cantarini to Everyone:
+	Perdon, pero no vi como lo exportas
+21:07:35 From [TUTOR] Nicolas Temprano to Everyone:
+	Reacted to "Lo bueno de esta fun..." with 💪
+21:07:40 From Tomás Redona to Everyone:
+	Reacted to "Lo bueno de esta fun..." with 💪
+21:08:12 From Leonardo Cantarini to Everyone:
+	Gracias
+21:08:15 From Juan Pardo to Everyone:
+	Esto de separar modelos es para que el compilador empaquete los componentes solo donde los usa?
+	No recomendas usar standalone?
+21:09:05 From Profesor Coderhouse to Everyone:
+	https://material.angular.io/components/categories
+21:11:22 From [Tutora] Sofia Altamirano to Everyone:
+	Replying to "Esto de separar mode..."
+	
+	Por el contenido de las entregas es recomendable usar modulos,
+21:11:25 From Sebastián Ortiz to Everyone:
+	otra vez los imports
+21:11:32 From Sebastián Ortiz to Everyone:
+	pero esta vez de material
+21:11:56 From Profesor Coderhouse to Everyone:
+	https://material.angular.io/components/sidenav/api
+21:14:38 From Octavio Díaz Crespo to Everyone:
+	humilde
+21:15:46 From Leandro Soto to Everyone:
+	tutores/profe recomendarias hacer un componente para el toolbar, otro para el side nav?
+21:16:02 From Leandro Soto to Everyone:
+	o no lo crees necesario?
+21:16:06 From Profesor Coderhouse to Everyone:
+	https://material.angular.io/components/icon/overview
+21:17:34 From Octavio Díaz Crespo to Everyone:
+	vinculá le botón del toolbar con el sidenav
+21:17:40 From [TUTOR] Nicolas Temprano to Everyone:
+	Algo que hago yo, es crear un módulo y realizar todos los imports de Material que voy utilizando en la app. Luego realizo solo un import en el componente y no tengo un choclazo de imports jaja
+21:17:41 From Octavio Díaz Crespo to Everyone:
+	así queda fachero
+21:17:45 From Leandro Soto to Everyone:
+	okey gracias!
+21:18:08 From Octavio Díaz Crespo to Everyone:
+	omg sali en la tele
+21:18:14 From [TUTOR] Nicolas Temprano to Everyone:
+	Replying to "tutores/profe recome..."
+	
+	Lean ya te contestó el profe pero yo tampoco lo considero necesario. De todas formas, si lo crees conveniente o lo queres implementar, lo podes realizar
+21:18:27 From [TUTOR] Nicolas Temprano to Everyone:
+	Reacted to "omg sali en la tele" with 😂
+21:18:45 From [Tutora] Sofia Altamirano to Everyone:
+	Replying to "tutores/profe recome..."
+	
+	Por mi parte si lo recomendaría, para irse acostumbrando a tener componentes separados. Y porque en otras entregas hay que sumarle cosas al toolbar
+21:18:54 From Federico Livingston to Everyone:
+	si tuviese otro modulo ademas del dash y quiero tener la misma barra si lo pongo en otro componente no?
+21:20:07 From Sebastián Ortiz to Everyone:
+	Replying to "Algo que hago yo, es..."
+	
+	ese modulo recomendas crearlo en alguna carpeta en especifico o solamente dentro de app?
+21:20:32 From Leandro Soto to Everyone:
+	Reacted to "Algo que hago yo, es..." with 👍
+21:20:40 From [Tutora] Sofia Altamirano to Everyone:
+	Replying to "si tuviese otro modu..."
+	
+	La barra va a estar un nivel más arriba que el dashboard por asi decirlo, o sea que cuando vayas cambiando los modulos tu barra y tu sidebar se van a mantener, y va a ir cambiando el contenido del dashboard
+21:20:45 From [TUTOR] Nicolas Temprano to Everyone:
+	Replying to "si tuviese otro modu..."
+	
+	No, la idea es no repetir la lógica. En el app o en el componente que los contenga la barra la dejas la vista y el dash o el otro módulo después lo vamos a ir manejando con routing
+21:20:56 From [TUTOR] Nicolas Temprano to Everyone:
+	Replying to "si tuviese otro modu..."
+	
+	Pero eso un poquito más adelante
+21:21:56 From [TUTOR] Nicolas Temprano to Everyone:
+	Replying to "Algo que hago yo, es..."
+	
+	Depende un poquito de la estructura de las carpetas que tengas. Si tenes una carpeta con "shared" podes incluirlo ahí. Si todavía no tenes una estructura definida podes ponerla al nivel del app.module
+21:22:27 From Sebastián Ortiz to Everyone:
+	Reacted to "Depende un poquito d..." with 👍
+21:23:28 From Pablo Sebastian to Everyone:
+	se puede utilizar tailwind?
+21:23:39 From Julio Cisneros Rosales to Everyone:
+	x2
+21:24:13 From [Tutora] Sofia Altamirano to Everyone:
+	Replying to "se puede utilizar ta..."
+	
+	En la entrega entra el uso de material
+21:25:58 From Juan Velazquez to Everyone:
+	Replying to "se puede utilizar ta..."
+	
+	hola es bueno combinar material con boostrap
+21:26:05 From Julio Cisneros Rosales to Everyone:
+	Ese se ve muy bien
+21:26:12 From Profesor Coderhouse to Everyone:
+	npm install primeflex
+21:26:26 From Pablo Sebastian to Everyone:
+	Replying to "se puede utilizar ta..."
+	
+	para el posicionamiento se podría utilizara tailwind también o no?
+21:26:37 From Octavio Díaz Crespo to Everyone:
+	pero no estas cominando ahí librerias?
+21:27:00 From Romina Giménez to Everyone:
+	pero cuando instalas bootstrap no te instala todo?
+21:27:12 From Leidy Uribe Marcos to Everyone:
+	Como tailwind?
+21:27:13 From [Tutora] Sofia Altamirano to Everyone:
+	Replying to "se puede utilizar ta..."
+	
+	mientras a nivel visual se vea un solo design system no hay problema
+21:27:16 From Romina Giménez to Everyone:
+	O:
+21:30:11 From Julio Cisneros Rosales to Everyone:
+	Puede mostrar el dashboard.module.ts ? porfa
+21:32:15 From Romina Giménez to Everyone:
+	sipp
+21:32:21 From Sebastián Ortiz to Everyone:
+	porque decias que preferis mas el de prime flex?
+21:32:22 From Octavio Díaz Crespo to Everyone:
+	a comerr
+21:32:30 From Julio Cisneros Rosales to Everyone:
+	A si mejoor jejejej :D
+21:32:34 From Romina Giménez to Everyone:
+	Reacted to "a comerr" with 🌟
+21:32:48 From Romina Giménez to Everyone:
+	Replying to "a comerr"
+	
+	yo ni merende hoy haha
+21:33:09 From Sebastián Ortiz to Everyone:
+	perfecto!
+21:34:01 From Profesor Coderhouse to Everyone:
+	https://github.com/josuebaez61/pf-baez-59435
+21:34:04 From Octavio Díaz Crespo to Everyone:
+	Replying to "a comerr"
+	
+	tengo galletitas
+21:34:28 From Romina Giménez to Everyone:
+	Reacted to "tengo galletitas" with 😍
+21:34:37 From Nayla Saez to Everyone:
+	oki
+21:34:39 From Sebastián Ortiz to Everyone:
+	👍
+21:34:40 From Nicolás Pradenas to Everyone:
+	por mientras a destruir el proyecto xD
+21:35:34 From [TUTOR] Nicolas Temprano to Everyone:
+	Uuuh temon
+21:36:04 From Profesor Coderhouse to Everyone:
+	Reacted to "Uuuh temon" with 🫶
+21:40:40 From Profesor Coderhouse to Everyone:
+	ajajaja me di cuenta que se puso un tema re power
+21:40:48 From Profesor Coderhouse to Everyone:
+	espero no haberlos estresado jaja
+21:41:28 From Profesor Coderhouse to Everyone:
+	VICTIMIZED!!! 😂🤟
+21:44:13 From Nayla Saez to Everyone:
+	sii
+21:44:16 From Sebastián Ortiz to Everyone:
+	justito volvi
+21:44:23 From [TUTOR] Nicolas Temprano to Everyone:
+	Reacted to "VICTIMIZED!!! 😂🤟" with 😂
+21:44:51 From Romina Giménez to Everyone:
+	ahh justo eso iba a preguntar, si no era mejor una tabla
+21:44:52 From Maximiliano Leurino to Everyone:
+	profe en algún after podrias mostrar como hacer para que un proyecto de angular se pueda visualizar en GitHub. asi como en react hay que hacerle ciertas cosas para que se pueda ver la pagina
+21:45:05 From Profesor Coderhouse to Everyone:
+	https://material.angular.io/components/icon/overview
+21:46:46 From Romina Giménez to Everyone:
+	si quisieramos usar los iconos de font-awesome podriamos? (para el proyecto este especificametne digo)
+21:47:20 From [TUTOR] Nicolas Temprano to Everyone:
+	Replying to "si quisieramos usar ..."
+	
+	Si, pueden utilizarlos
+21:47:40 From [Tutora] Sofia Altamirano to Everyone:
+	Replying to "si quisieramos usar ..."
+	
+	Siempre y cuando los uses en todos los lugares que utilices íconos
+21:47:55 From Leandro Soto to Everyone:
+	no es necesario importarlo antes de exportarlo? o solo con el export funciona
+21:48:06 From Romina Giménez to Everyone:
+	Reacted to "Siempre y cuando los..." with 🙌
+21:48:09 From Romina Giménez to Everyone:
+	Reacted to "Si, pueden utilizarl..." with 🌟
+21:48:11 From Profesor Coderhouse to Everyone:
+	https://ionic.io/ionicons
+21:48:25 From Julio Cisneros Rosales to Everyone:
+	heroicons Tambien es buena
+21:49:43 From [Tutora] Sofia Altamirano to Everyone:
+	Yo uso estos https://tablericons.com/
+21:50:37 From Octavio Díaz Crespo to Everyone:
+	yo los iconos de mat icon los agarro de google fonts
+21:50:52 From Romina Giménez to Everyone:
+	Replying to "Yo uso estos https:/..."
+	
+	que lindos estos!
+21:51:05 From [Tutora] Sofia Altamirano to Everyone:
+	Reacted to "que lindos estos!" with ❤️
+21:51:15 From Profesor Coderhouse to Everyone:
+	https://fonts.google.com/icons?icon.size=24&icon.color=%23e8eaed
+21:51:15 From [Tutora] Sofia Altamirano to Everyone:
+	Replying to "Yo uso estos https:/..."
+	
+	Siii, y muy completo
+21:51:24 From Romina Giménez to Everyone:
+	Reacted to "https://fonts.google..." with 🌟
+21:51:26 From Romina Giménez to Everyone:
+	remove 🌟
+21:51:31 From Romina Giménez to Everyone:
+	Reacted to "https://fonts.google..." with 🌟
+21:51:41 From Profesor Coderhouse to Everyone:
+	https://material.angular.io/components/button/overview
+21:52:18 From Julio Cisneros Rosales to Everyone:
+	Me aparece este error
+21:52:27 From Julio Cisneros Rosales to Everyone:
+	me pueden ayudar
+21:52:54 From [TUTOR] Nicolas Temprano to Everyone:
+	Julio fíjate si tenes el componente correctamente importado
+21:53:02 From Octavio Díaz Crespo to Everyone:
+	no estarás exportando el componente user
+21:53:13 From Julio Cisneros Rosales to Everyone:
+	en donde lo importo ?
+21:54:36 From Leonardo Cantarini to Everyone:
+	Replying to "en donde lo importo ..."
+	
+	import { UsersModule } from './users/users.module';
+21:54:50 From Leonardo Cantarini to Everyone:
+	Replying to "en donde lo importo ..."
+	
+	Eso en dashboard.module.ts
+21:54:53 From Nicolás Pradenas to Everyone:
+	a mi me funcionó el accent
+21:55:11 From Leandro Soto to Everyone:
+	por el custom
+21:55:32 From Leonardo Cantarini to Everyone:
+	Replying to "en donde lo importo ..."
+	
+	Y en el array de imports tenes que poner UsersModule
+21:55:42 From Julio Cisneros Rosales to Everyone:
+	Replying to "en donde lo importo ..."
+	
+	listo gracias :DDD
+21:55:43 From Nicolás Pradenas to Everyone:
+	ah pero yo no elegí el custom 😅
+21:55:50 From Leandro Soto to Everyone:
+	claro
+21:56:02 From Leandro Soto to Everyone:
+	tenes que ver el styles
+21:56:32 From Profesor Coderhouse to Everyone:
+	https://material.angular.io/guide/theming
+21:58:20 From Octavio Díaz Crespo to Everyone:
+	nooo, leer es mi debilidad
+21:58:51 From [Tutora] Sofia Altamirano to Everyone:
+	secondary
+21:59:52 From Romina Giménez to Everyone:
+	Replying to "nooo, leer es mi deb..."
+	
+	a mi el chaty me re ayuda con esto! le podes pedir instrucciones especificas de como hacer algunas cosas o que te resuma ciertos contenidos (y te los lea en voz alta :p).
+	Yo soy dislexica y me re sirve posta
+22:00:20 From Octavio Díaz Crespo to Everyone:
+	Reacted to "a mi el chaty me re ..." with ❤️
+22:00:45 From Leandro Soto to Everyone:
+	a mi me hizo crear un custom-theme.scss
+22:00:47 From Octavio Díaz Crespo to Everyone:
+	Replying to "nooo, leer es mi deb..."
+	
+	Chat gpt es mi profesor particular en realidad	Ya tenemos hasta afinidad
+22:01:00 From Romina Giménez to Everyone:
+	Reacted to "Chat gpt es mi profe..." with 🌟
+22:01:54 From Leandro Soto to Everyone:
+	Replying to "a mi me hizo crear u..."
+	
+	ng generate @angular/material:m3-theme
+22:03:04 From Profesor Coderhouse to Everyone:
+	https://material.angular.io/components/input/overview
+22:04:21 From Profesor Coderhouse to Everyone:
+	https://material.angular.io/components/select/overview
+22:07:00 From Pablo Sebastian to Everyone:
+	esto es combinable con el FormBuilder no?
+22:10:13 From [Tutora] Sofia Altamirano to Everyone:
+	Reacted to "pero no estas comina..." with 👍🏽
+22:10:19 From [Tutora] Sofia Altamirano to Everyone:
+	Reacted to "esto es combinable c..." with 👍🏽
+22:16:26 From Sebastián Ortiz to Everyone:
+	todo ok!
+22:16:32 From Romina Giménez to Everyone:
+	bien!
+22:16:40 From Federico Livingston to Everyone:
+	bien
+22:17:07 From Pablo Sebastian to Everyone:
+	subscribe?
+22:17:42 From Sebastián Ortiz to Everyone:
+	no habia que usar @output?
+22:18:07 From Sebastián Ortiz to Everyone:
+	ok!
+22:20:39 From Pablo Sebastian to Everyone:
+	observables
+22:20:47 From Leandro Soto to Everyone:
+	next?
+22:20:54 From Octavio Díaz Crespo to Everyone:
+	Rx
+22:21:28 From Octavio Díaz Crespo to Everyone:
+	usar modal es para valientes
+22:21:36 From [Tutora] Sofia Altamirano to Everyone:
+	Reacted to "usar modal es para v..." with 😂
+22:21:45 From Romina Giménez to Everyone:
+	Reacted to "usar modal es para v..." with 🤣
+22:21:48 From Juan Pardo to Everyone:
+	es una promesa?
+22:21:54 From [TUTOR] Nicolas Temprano to Everyone:
+	Reacted to "usar modal es para v..." with 😂
+22:21:59 From Octavio Díaz Crespo to Everyone:
+	Replying to "es una promesa?"
+	
+	es algo mucho peor
+22:22:06 From Romina Giménez to Everyone:
+	Replying to "usar modal es para v..."
+	
+	pero a que son utiles? haha
+22:22:07 From [Tutora] Sofia Altamirano to Everyone:
+	Replying to "es una promesa?"
+	
+	No, no es una promesa, es más potente
+22:22:15 From Julio Cisneros Rosales to Everyone:
+	💀
+22:22:17 From Octavio Díaz Crespo to Everyone:
+	Replying to "usar modal es para v..."
+	
+	son lindos nomas
+22:22:22 From Romina Giménez to Everyone:
+	Reacted to "son lindos nomas" with 🤣
+22:22:40 From Octavio Díaz Crespo to Everyone:
+	Replying to "es una promesa?"
+	
+	las promesas tienen pesadillas con los observables
+22:22:42 From [Tutora] Sofia Altamirano to Everyone:
+	Replying to "usar modal es para v..."
+	
+	Para nuestro rey, el usuario!
+22:22:45 From Leandro Soto to Everyone:
+	guardar el form en el result
+22:22:58 From Octavio Díaz Crespo to Everyone:
+	Replying to "usar modal es para v..."
+	
+	vivo para servir
+22:23:13 From Leandro Soto to Everyone:
+	prueba y error
+22:23:14 From Octavio Díaz Crespo to Everyone:
+	Reacted to "Para nuestro rey, el..." with 😅
+22:23:15 From Pablo Sebastian to Everyone:
+	vale la pena tipar el result?
+22:25:34 From Leandro Soto to Everyone:
+	podrias armar un json no?
+22:26:56 From Julio Cisneros Rosales to Everyone:
+	ok
+22:27:05 From Leandro Soto to Everyone:
+	Una especie de for
+22:28:24 From Federico Livingston to Everyone:
+	es obligatorio que las columnas y la cantidad de datos por fila sean igaules o puedo tener datos que no muestro en el array?
+22:29:38 From [TUTOR] Nicolas Temprano to Everyone:
+	Replying to "es obligatorio que l..."
+	
+	Podes tener datos en un array que no muestres en la columna. Lo ajustas a tus necesidades la tabla
+22:29:39 From Julio Cisneros Rosales to Everyone:
+	Pero si uno quiere poner algo en la tabla desde un input y que cada vez lo valla poniendo en la tabla
+22:29:55 From Julio Cisneros Rosales to Everyone:
+	se valla viendo
+22:30:32 From Pablo Sebastian to Everyone:
+	también tenemos que usar las tabas de material o podemos usar ag-grid?
+22:30:35 From Sebastián Ortiz to Everyone:
+	habria que agregarlo al datasource
+22:31:55 From [TUTOR] Nicolas Temprano to Everyone:
+	Replying to "también tenemos que ..."
+	
+	Yo les recomiendo que utilicen material por los requisitos de entrega del proyecto
+22:31:56 From Julio Cisneros Rosales to Everyone:
+	aaa ok ya veo por donde va
+22:32:33 From Pablo Sebastian to Everyone:
+	Replying to "también tenemos que ..."
+	
+	ok ok gracias
+22:33:45 From Julio Cisneros Rosales to Everyone:
+	falta ponerlo en el array
+22:34:26 From Sebastián Ortiz to Everyone:
+	👍👍
+22:34:44 From Julio Cisneros Rosales to Everyone:
+	Perfecto !
+22:34:46 From Romina Giménez to Everyone:
+	buenisimo
+22:35:02 From Julio Cisneros Rosales to Everyone:
+	listo para entregar
