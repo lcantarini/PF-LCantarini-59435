@@ -4,7 +4,7 @@ import { Directive, ElementRef, input, OnChanges, SimpleChanges } from '@angular
   selector: '[appHighlight]'
 })
 export class HighlightDirective implements OnChanges {
-@Input()
+
 color = 'yellow';
 
   constructor(private el: ElementRef<HTMLElement>) {
@@ -19,7 +19,7 @@ color = 'yellow';
    }
 
    applyStyles(): void {
-    this.el.nativeElement.style.backgroundColor = 
+    this.el.nativeElement.style.backgroundColor = this.color;
    }
 
 }

@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { DashboardModule } from './features/dashboard/dashboard.module';
+import { provideNativeDateAdapter } from '@angular/material/core';
+import { SharedModule } from './shared/shared.module';
+
 
 @NgModule({
   declarations: [
@@ -13,10 +16,11 @@ import { DashboardModule } from './features/dashboard/dashboard.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DashboardModule
+    DashboardModule,
+    SharedModule
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(), provideNativeDateAdapter()
   ],
   bootstrap: [AppComponent]
 })
