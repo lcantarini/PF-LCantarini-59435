@@ -17,7 +17,7 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     AppRoutingModule,
     DashboardModule,
-    SharedModule
+    SharedModule,
   ],
   providers: [
     provideAnimationsAsync(), provideNativeDateAdapter()

@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
-import { UserFullnamePipe } from './pipes/user-fullname.pipe';
 import { HighlightDirective } from './directives/highlight.directive';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
@@ -12,11 +11,17 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
+import { UserFullNamePipe } from './pipes/user-fullname.pipe';
+import { ReSizeTitleDirective } from './directives/re-size-title.directive';
+
+
+
 
 @NgModule({
   declarations: [
-    UserFullnamePipe,
-    HighlightDirective
+    UserFullNamePipe,
+    HighlightDirective,
+    ReSizeTitleDirective,
   ],
   imports: [
     CommonModule
@@ -35,6 +40,8 @@ import {MatTableModule} from '@angular/material/table';
     MatSelectModule,
     MatFormFieldModule,
     MatTableModule,
+    UserFullNamePipe,
+    ReSizeTitleDirective
   ]
 })
 export class SharedModule { }
