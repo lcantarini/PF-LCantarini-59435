@@ -6,16 +6,16 @@ import { User } from './models';
 
 
 const ELEMENT_DATA: User[] = [
-  {id: '1', firstname: 'Hydrogen',  lastname: 'Gonzalez', createdAt: new Date(), email: 'Hydrogen@gmail.com'},
-  {id: '2', firstname: 'Helium', lastname: 'Gomez', createdAt: new Date(), email: 'Helium@gmail.com'},
-  {id: '3', firstname: 'Lithium', lastname: 'Perez', createdAt: new Date(), email: 'Lithium@gmail.com'},
-  {id: '4', firstname: 'Beryllium', lastname: 'Fernandez', createdAt: new Date(), email: 'Beryllium@gmail.com'},
-  {id: '5', firstname: 'Boron', lastname: 'Aguilera', createdAt: new Date(), email: 'Boron@gmail.com'},
-  {id: '6', firstname: 'Carbon', lastname: 'Caceres', createdAt: new Date(), email: 'Carbon@gmail.com'},
-  {id: '7', firstname: 'Nitrogen', lastname: 'Martinez', createdAt: new Date(), email: 'Nitrogen@gmail.com'},
-  {id: '8', firstname: 'Oxygen', lastname: 'Hidalgo', createdAt: new Date(), email: 'Oxygen@gmail.com'},
-  {id: '9', firstname: 'Fluorine', lastname: 'Lopez', createdAt: new Date(), email: 'Fluorine@gmail.com'},
-  {id: '10',firstname: 'Neon', lastname: 'Suarez', createdAt: new Date(), email: 'Neon@gmail.com'},
+  {id: '1', firstName: 'Hydrogen',  lastName: 'Gonzalez', createdAt: new Date(), email: 'Hydrogen@gmail.com'},
+  {id: '2', firstName: 'Helium', lastName: 'Gomez', createdAt: new Date(), email: 'Helium@gmail.com'},
+  {id: '3', firstName: 'Lithium', lastName: 'Perez', createdAt: new Date(), email: 'Lithium@gmail.com'},
+  {id: '4', firstName: 'Beryllium', lastName: 'Fernandez', createdAt: new Date(), email: 'Beryllium@gmail.com'},
+  {id: '5', firstName: 'Boron', lastName: 'Aguilera', createdAt: new Date(), email: 'Boron@gmail.com'},
+  {id: '6', firstName: 'Carbon', lastName: 'Caceres', createdAt: new Date(), email: 'Carbon@gmail.com'},
+  {id: '7', firstName: 'Nitrogen', lastName: 'Martinez', createdAt: new Date(), email: 'Nitrogen@gmail.com'},
+  {id: '8', firstName: 'Oxygen', lastName: 'Hidalgo', createdAt: new Date(), email: 'Oxygen@gmail.com'},
+  {id: '9', firstName: 'Fluorine', lastName: 'Lopez', createdAt: new Date(), email: 'Fluorine@gmail.com'},
+  {id: '10',firstName: 'Neon', lastName: 'Suarez', createdAt: new Date(), email: 'Neon@gmail.com'},
 ];
 
 @Component({
@@ -49,12 +49,14 @@ export class UsersComponent {
         next: (result) => {
           console.log('RECIBIMOS: ', result);
 
-          if(!!result){
-            this.dataSource = [...this.dataSource, 
-              {
-                ...result,
-              },
-            ]
+          if (!!result){
+            if (editingUser) {
+              this.dataSource = this.dataSource.map((user) => user.id === editingUser.id ? {...user, ...result} : user
+            );
+            } else {
+              this.dataSource = [ ...this.dataSource, result ];
+            }
+            
           }
         }
       });

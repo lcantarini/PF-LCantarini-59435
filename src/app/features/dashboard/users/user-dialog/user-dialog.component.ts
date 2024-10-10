@@ -19,7 +19,7 @@ export class UserDialogComponent {
   constructor(
     private matDialogRef: MatDialogRef<UserDialogComponent>,
     private formBuilder: FormBuilder,
-    @Inject(MAT_DIALOG_DATA) private data?: UserDialogData
+    @Inject(MAT_DIALOG_DATA) public data?: UserDialogData
    ){
     console.log(data);
 
@@ -28,6 +28,17 @@ export class UserDialogComponent {
       lastName: [null, [Validators.required]],
       email: [null, [Validators.required]],
     });
+    this.patchFormValue();
+  }
+
+  private get isEditing() {
+    return this.data?.editingUser
+  }
+
+  patchFormValue() {
+    if (this.data?.editingUser) {
+      this.userForm.patchValue(this.data.editingUser)
+    }
   }
 
 
@@ -37,8 +48,12 @@ export class UserDialogComponent {
     } else {
       this.matDialogRef.close({
         ...this.userForm.value,
-        id: generateStringRandom(4),
-        createdAt: new Date(),
+        id: this.isEditing
+         ? this.data!.editingUser!.id 
+         : generateStringRandom(4),
+        createdAt: this.isEditing
+        ? this.data!.editingUser!.createdAt
+        : new Date(),
       });
     }
     

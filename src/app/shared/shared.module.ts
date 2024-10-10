@@ -13,6 +13,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
 import { UserFullNamePipe } from './pipes/user-fullname.pipe';
 import { ReSizeTitleDirective } from './directives/re-size-title.directive';
+import { UserCompleteNamePipe } from './pipes/user-complete-name.pipe';
 
 
 
@@ -22,6 +23,7 @@ import { ReSizeTitleDirective } from './directives/re-size-title.directive';
     UserFullNamePipe,
     HighlightDirective,
     ReSizeTitleDirective,
+    UserCompleteNamePipe,
   ],
   imports: [
     CommonModule
