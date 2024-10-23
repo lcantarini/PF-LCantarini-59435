@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Course } from '../../features/dashboard/courses/models';
 import { generateStringRandom } from '../../shared/utils';
-import { Observable, of } from 'rxjs';
+import { delay, map, Observable, of } from 'rxjs';
 
 export let MY_COURSES_DB: Course[] = [
   {
@@ -49,12 +49,43 @@ export class CoursesService {
 
   constructor() { }
 
-  getCourses(): Observable<Course[]> {
-    return of([...MY_COURSES_DB]);
+  getById(id: string): Observable<Course | undefined > {
+    return this.getCourses().pipe(map((courses) => courses.find((c) => c.id === id)));
   }
 
-  deleteById(id: string): Observable<Course[]> {
-    MY_COURSES_DB = MY_COURSES_DB.filter((c) => c.id !== id);
-    return this.getCourses();
+  getCourses(): Observable<Course[]> {
+    return new Observable((observer) => {
+      setInterval(() => {
+        observer.next(MY_COURSES_DB);
+        observer.complete();
+      }, 2000);
+    });
   }
+
+  removeCourseById(id: string): Observable<Course[]> {
+    MY_COURSES_DB = MY_COURSES_DB.filter((c) => c.id !== id);
+    return of(MY_COURSES_DB).pipe(delay(1000));
+  }
+
+  updateUserById(id: string, update: Partial<Course>) {
+    MY_COURSES_DB = MY_COURSES_DB.map((course) =>
+      course.id === id ? { ...course, ...update } : course
+    );
+
+    return new Observable<Course[]>((observer) => {
+      setInterval(() => {
+        observer.next(MY_COURSES_DB);
+        observer.complete();
+      }, 1000);
+    });
+
+  }
+
+  insertUser(user: Course) : Observable<Course[]> {
+    MY_COURSES_DB = [ ...MY_COURSES_DB, user ];
+
+    return of(MY_COURSES_DB);
+  }
+
+
 }

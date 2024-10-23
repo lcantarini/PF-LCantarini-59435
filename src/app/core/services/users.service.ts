@@ -32,7 +32,7 @@ export class UsersService {
       setInterval(() => {
         observer.next(MY_USERS_DB);
         observer.complete();
-      }, 3000);
+      }, 2000);
     });
   }
 

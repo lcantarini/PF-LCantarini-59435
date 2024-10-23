@@ -1,0 +1,40 @@
+<h1 mat-dialog-title>{{data?.editingCourse ? "Editando " : "Creando"}} Curso</h1>
+
+<div mat-dialog-content>
+    <form [formGroup]="courseForm">
+        <div class="row" >
+            <div class="col-6">
+              <mat-form-field class="example-form-field w-100">
+                <mat-label>Nombre</mat-label>
+                <input formControlName="name" matInput type="text" >
+                <mat-error>
+                  @if(courseForm.get('name')?.hasError('required')) { Este campo es requerido }
+                </mat-error>
+              </mat-form-field>
+            </div>
+              <div class="col-6">
+                <mat-form-field class="example-form-field w-100">
+                  <mat-label>Fecha de inicio</mat-label>
+                  <input formControlName="startAt" matInput type="date" >
+                  <mat-error>
+                    @if(courseForm.get('startAt')?.hasError('required')) { Este campo es requerido }
+                  </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-6">
+              <mat-form-field class="example-form-field w-100">
+                <mat-label>Fecha de fin</mat-label>
+                <input formControlName="endAt" matInput type="date" >
+                <mat-error>
+                  @if(courseForm.get('endAt')?.hasError('required')) { Este campo es requerido }
+                </mat-error>
+              </mat-form-field>
+          </div>
+          </div>
+    </form>
+</div>
+
+<div mat-dialog-actions>
+    <button mat-button mat-dialog-close>Cancelar</button>
+    <button mat-button (click)="onSave()">Guardar</button>
+</div>
