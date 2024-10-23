@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { UserDialogComponent } from './user-dialog/user-dialog.component';
-import { AppModule } from '../../../app.module';
 import { User } from './models';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 const ELEMENT_DATA: User[] = [
@@ -28,7 +28,12 @@ export class UsersComponent {
   displayedColumns: string[] = ['id', 'name', 'email', 'createdAt', 'actions' ];
   dataSource = ELEMENT_DATA;
 
-  constructor(private matDialog: MatDialog){}
+  constructor(
+    private matDialog: MatDialog,
+    private router: Router,
+    private activatedRoute: ActivatedRoute,
+
+  ){}
 
   onDelete(id: string) {
     if (confirm('Esta seguro?')) {
@@ -36,6 +41,11 @@ export class UsersComponent {
     }
     
   }
+
+  goToDetail(id: string): void {
+    this.router.navigate([id, 'detail'], { relativeTo: this.activatedRoute})
+  }
+
 //
   openModal(editingUser?: User ): void {
     this.matDialog

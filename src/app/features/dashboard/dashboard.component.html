@@ -1,13 +1,33 @@
 <mat-drawer-container class="example-container" autosize>
     <!-- SIDEBAR (MENU LATERAL) -->
     <mat-drawer #drawer class="example-sidenav" mode="side">
-      <p>Menu lateral</p>
-      @if (showFiller) {
-      <p>Lorem, ipsum dolor sit amet consectetur.</p>
-      }
-      <button (click)="showFiller = !showFiller" mat-raised-button>
-        Cursos
-      </button>
+      <mat-nav-list>
+        <a
+          routerLink="home"
+          mat-list-item
+          routerLinkActive
+          #homelink="routerLinkActive"
+          [activated]="homelink.isActive"
+          >Inicio</a>
+        <a
+          routerLink="users"
+          mat-list-item
+          routerLinkActive
+          #usersLink="routerLinkActive"
+          [activated]="usersLink.isActive"
+          >Usuarios</a>
+          <a
+          routerLink="courses"
+          mat-list-item
+          routerLinkActive
+          #coursesLink="routerLinkActive"
+          [activated]="coursesLink.isActive"
+          >Cursos</a>
+        <a
+          (click)="logout()"
+          mat-list-item
+          >Cerrar Sesion</a>
+      </mat-nav-list>
     </mat-drawer>
   
     <!-- AREA DERECHA (CONTENIDO) -->
@@ -25,6 +45,6 @@
         <span>MochAcad</span>
       </mat-toolbar>
   
-      <app-users />
+      <router-outlet></router-outlet>
     </div>
   </mat-drawer-container>
