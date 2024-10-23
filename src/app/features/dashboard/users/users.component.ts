@@ -1,45 +1,64 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { UserDialogComponent } from './user-dialog/user-dialog.component';
 import { User } from './models';
 import { ActivatedRoute, Router } from '@angular/router';
-
-
-const ELEMENT_DATA: User[] = [
-  {id: '1', firstName: 'Hydrogen',  lastName: 'Gonzalez', createdAt: new Date(), email: 'Hydrogen@gmail.com'},
-  {id: '2', firstName: 'Helium', lastName: 'Gomez', createdAt: new Date(), email: 'Helium@gmail.com'},
-  {id: '3', firstName: 'Lithium', lastName: 'Perez', createdAt: new Date(), email: 'Lithium@gmail.com'},
-  {id: '4', firstName: 'Beryllium', lastName: 'Fernandez', createdAt: new Date(), email: 'Beryllium@gmail.com'},
-  {id: '5', firstName: 'Boron', lastName: 'Aguilera', createdAt: new Date(), email: 'Boron@gmail.com'},
-  {id: '6', firstName: 'Carbon', lastName: 'Caceres', createdAt: new Date(), email: 'Carbon@gmail.com'},
-  {id: '7', firstName: 'Nitrogen', lastName: 'Martinez', createdAt: new Date(), email: 'Nitrogen@gmail.com'},
-  {id: '8', firstName: 'Oxygen', lastName: 'Hidalgo', createdAt: new Date(), email: 'Oxygen@gmail.com'},
-  {id: '9', firstName: 'Fluorine', lastName: 'Lopez', createdAt: new Date(), email: 'Fluorine@gmail.com'},
-  {id: '10',firstName: 'Neon', lastName: 'Suarez', createdAt: new Date(), email: 'Neon@gmail.com'},
-];
+import { UsersService } from '../../../core/services/users.service';
 
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
   styleUrl: './users.component.scss'
 })
-export class UsersComponent {
+export class UsersComponent implements OnInit {
 
   displayedColumns: string[] = ['id', 'name', 'email', 'createdAt', 'actions' ];
-  dataSource = ELEMENT_DATA;
+  dataSource: User[] = [];
+
+  isLoading = false;
 
   constructor(
     private matDialog: MatDialog,
     private router: Router,
     private activatedRoute: ActivatedRoute,
+    private usersService: UsersService
 
   ){}
 
+  ngOnInit(): void {
+    this.loadUsers();
+  }
+
+  loadUsers(): void {
+    this.isLoading = true;
+    this.usersService.getUsers().subscribe({
+      next: (users) => {
+        this.dataSource = users;
+      },
+      error: () => {
+        this.isLoading = false;
+      },
+      complete: () => {
+        this.isLoading = false;
+      },
+    });
+  }
+
   onDelete(id: string) {
     if (confirm('Esta seguro?')) {
-      this.dataSource = this.dataSource.filter((user) => user.id !== id)
+      this.isLoading = true;
+      this.usersService.removeUserById(id).subscribe({
+        next: (users) => {
+          this.dataSource = users;
+        },
+        error: (err) => {
+          this.isLoading = false;
+        },
+        complete: () => {
+          this.isLoading = false;
+        },
+      });
     }
-    
   }
 
   goToDetail(id: string): void {
@@ -52,23 +71,50 @@ export class UsersComponent {
       .open(UserDialogComponent, {
         data: {
           editingUser,
-        }
+        },
       })
       .afterClosed()
       .subscribe({
         next: (result) => {
-          console.log('RECIBIMOS: ', result);
-
           if (!!result){
             if (editingUser) {
-              this.dataSource = this.dataSource.map((user) => user.id === editingUser.id ? {...user, ...result} : user
-            );
+              this.handleUpdate(editingUser.id, result);
             } else {
-              this.dataSource = [ ...this.dataSource, result ];
+              this.handleInsert(result);
             }
             
           }
         }
       });
+  }
+
+  handleUpdate(id: string, update: User): void {
+    this.isLoading = true;
+    this.usersService.updateUserById(id, update).subscribe({
+      next: (users) => {
+        this.dataSource = users;
+      },
+      error: (err) => {
+        this.isLoading = false;
+      },
+      complete: () => {
+        this.isLoading = false;
+      },
+    });
+  }
+
+  handleInsert( update: User): void {
+    this.isLoading = true;
+    this.usersService.insertUser(update).subscribe({
+      next: (users) => {
+        this.dataSource = users;
+      },
+      error: (err) => {
+        this.isLoading = false;
+      },
+      complete: () => {
+        this.isLoading = false;
+      },
+    });
   }
 }

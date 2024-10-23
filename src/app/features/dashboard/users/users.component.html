@@ -2,6 +2,11 @@
 
   <h2 appReSizeTitle>Usuarios</h2>
 
+  @if (isLoading) {
+    <mat-spinner></mat-spinner>
+  
+    } @else {
+
   <button mat-button (click)="openModal()">
     <mat-icon>
       add
@@ -57,5 +62,5 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
-
+}
 </div>

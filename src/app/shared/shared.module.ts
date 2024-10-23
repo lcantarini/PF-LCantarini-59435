@@ -14,6 +14,7 @@ import {MatTableModule} from '@angular/material/table';
 import { UserFullNamePipe } from './pipes/user-fullname.pipe';
 import { ReSizeTitleDirective } from './directives/re-size-title.directive';
 import { UserCompleteNamePipe } from './pipes/user-complete-name.pipe';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
 
@@ -43,7 +44,8 @@ import { UserCompleteNamePipe } from './pipes/user-complete-name.pipe';
     MatFormFieldModule,
     MatTableModule,
     UserFullNamePipe,
-    ReSizeTitleDirective
+    ReSizeTitleDirective,
+    MatProgressSpinnerModule,
   ]
 })
 export class SharedModule { }
