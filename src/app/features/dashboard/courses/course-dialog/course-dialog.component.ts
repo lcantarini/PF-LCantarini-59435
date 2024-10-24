@@ -40,7 +40,6 @@ export class CourseDialogComponent {
     }
   }
 
-
   onSave(): void {
     if (this.courseForm.invalid){
       this.courseForm.markAllAsTouched();

@@ -17,12 +17,26 @@
           [activated]="usersLink.isActive"
           >Usuarios</a>
           <a
+          routerLink="students"
+          mat-list-item
+          routerLinkActive
+          #studentsLink="routerLinkActive"
+          [activated]="studentsLink.isActive"
+          >Alumnos</a>
+          <a
           routerLink="courses"
           mat-list-item
           routerLinkActive
           #coursesLink="routerLinkActive"
           [activated]="coursesLink.isActive"
           >Cursos</a>
+          <a
+          routerLink="class"
+          mat-list-item
+          routerLinkActive
+          #classesLink="routerLinkActive"
+          [activated]="classesLink.isActive"
+          >Clases</a>
         <a
           (click)="logout()"
           mat-list-item

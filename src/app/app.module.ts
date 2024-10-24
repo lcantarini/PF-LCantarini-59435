@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideNativeDateAdapter } from '@angular/material/core';
 import { SharedModule } from './shared/shared.module';
-
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 
 @NgModule({
@@ -19,7 +19,9 @@ import { SharedModule } from './shared/shared.module';
     SharedModule,
   ],
   providers: [
-    provideAnimationsAsync(), provideNativeDateAdapter()
+    provideAnimationsAsync(), 
+    provideNativeDateAdapter(), 
+    provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]
 })
