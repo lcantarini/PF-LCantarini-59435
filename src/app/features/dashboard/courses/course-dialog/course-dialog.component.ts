@@ -3,6 +3,7 @@ import { Course } from '../models';
 import { generateStringRandom } from '../../../../shared/utils';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import {MatDatepickerModule} from '@angular/material/datepicker'; 
 
 interface CourseDialogData {
   editingCourse?: Course;

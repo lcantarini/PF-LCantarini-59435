@@ -67,7 +67,7 @@ export class CoursesService {
     return of(MY_COURSES_DB).pipe(delay(1000));
   }
 
-  updateUserById(id: string, update: Partial<Course>) {
+  updateCourseById(id: string, update: Partial<Course>) {
     MY_COURSES_DB = MY_COURSES_DB.map((course) =>
       course.id === id ? { ...course, ...update } : course
     );
@@ -81,8 +81,8 @@ export class CoursesService {
 
   }
 
-  insertUser(user: Course) : Observable<Course[]> {
-    MY_COURSES_DB = [ ...MY_COURSES_DB, user ];
+  insertCourse(course: Course) : Observable<Course[]> {
+    MY_COURSES_DB = [ ...MY_COURSES_DB, course ];
 
     return of(MY_COURSES_DB);
   }

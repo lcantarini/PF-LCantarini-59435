@@ -1,1 +1,43 @@
-<p>enrollment-dialog works!</p>
+<h1 mat-dialog-title>{{data?.editingEnrollment ? "Editando " : "Creando"}} Inscripcion</h1>
+
+<div mat-dialog-content>
+    <form [formGroup]="enrollmentForm">
+        <div class="row" >
+            <div class="col-6">
+              <mat-form-field class="example-form-field w-100">
+                <mat-label>Alumno</mat-label>
+                <input formControlName="student" matInput type="text" >
+                <mat-error>
+                  @if(enrollmentForm.get('student')?.hasError('required')) { Este campo es requerido }
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-6">
+                <mat-form-field class="example-form-field w-100">
+                  <mat-label>Curso</mat-label>
+                  <input formControlName="course" matInput type="text" >
+                  <mat-error>
+                    @if(enrollmentForm.get('course')?.hasError('required')) { Este campo es requerido }
+                  </mat-error>
+                </mat-form-field>
+              </div>
+            <div class="col-6">
+              <mat-form-field class="example-form-field w-100">
+                <mat-label>Fecha de inscripcion</mat-label>
+                <input formControlName="enrolledAt" matInput [matDatepicker]="pickerEnd" >
+                <mat-hint>DD/MM/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="pickerEnd"></mat-datepicker-toggle>
+                <mat-datepicker #pickerEnd></mat-datepicker>
+                <mat-error>
+                  @if(enrollmentForm.get('enrolledAt')?.hasError('required')) { Este campo es requerido }
+                </mat-error>
+              </mat-form-field>
+          </div>
+          </div>
+    </form>
+</div>
+
+<div mat-dialog-actions>
+    <button mat-button mat-dialog-close>Cancelar</button>
+    <button mat-button (click)="onSave()">Guardar</button>
+</div>

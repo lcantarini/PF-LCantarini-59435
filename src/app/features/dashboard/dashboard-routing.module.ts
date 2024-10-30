@@ -5,6 +5,7 @@ import { HomeModule } from './home/home.module';
 import { CoursesModule } from './courses/courses.module';
 import { StudentsModule } from './students/students.module';
 import { ClassModule } from './class/class.module';
+import { EnrollmentModule } from './enrollment/enrollment.module';
 
 const routes: Routes = [
   {path: 'home',
@@ -25,6 +26,10 @@ const routes: Routes = [
   {
     path: 'class',
     loadChildren: () => ClassModule
+  },
+  {
+    path: 'enrollment',
+    loadChildren: () => EnrollmentModule
   }
 ];
 

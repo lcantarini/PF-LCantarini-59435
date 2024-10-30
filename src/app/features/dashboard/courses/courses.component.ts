@@ -89,7 +89,7 @@ export class CoursesComponent implements OnInit {
 
   handleUpdate(id: string, update: Course): void {
     this.isLoading = true;
-    this.coursesService.updateUserById(id, update).subscribe({
+    this.coursesService.updateCourseById(id, update).subscribe({
       next: (courses) => {
         this.dataSource = courses;
       },
@@ -104,7 +104,7 @@ export class CoursesComponent implements OnInit {
 
   handleInsert( update: Course): void {
     this.isLoading = true;
-    this.coursesService.insertUser(update).subscribe({
+    this.coursesService.insertCourse(update).subscribe({
       next: (courses) => {
         this.dataSource = courses;
       },

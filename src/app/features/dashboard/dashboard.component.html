@@ -37,6 +37,13 @@
           #classesLink="routerLinkActive"
           [activated]="classesLink.isActive"
           >Clases</a>
+          <a
+          routerLink="enrollment"
+          mat-list-item
+          routerLinkActive
+          #enrollmentLink="routerLinkActive"
+          [activated]="enrollmentLink.isActive"
+          >Inscripciones</a>
         <a
           (click)="logout()"
           mat-list-item

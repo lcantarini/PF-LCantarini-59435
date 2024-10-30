@@ -1,1 +1,68 @@
-<p>enrollment works!</p>
+<div class="container">
+    <h2 appReSizeTitle>Inscripciones a cursos</h2>
+ 
+    @if (isLoading) {
+      <mat-spinner></mat-spinner>
+    
+      } @else {
+  
+    <button mat-button (click)="openModal()">
+      <mat-icon>
+        add
+      </mat-icon>
+      Inscribir
+    </button>
+  
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+    
+      <!-- id Column -->
+        <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> Id </th>
+        <td mat-cell *matCellDef="let enrollment"> {{enrollment.id}} </td>
+        </ng-container>
+    
+      <!-- student Column -->
+        <ng-container matColumnDef="student">
+        <th mat-header-cell *matHeaderCellDef> Alumno </th>
+        <td mat-cell *matCellDef="let enrollment"> {{ enrollment.student | studentFullName}} </td>
+        </ng-container>
+        <!-- course Column -->
+        <ng-container matColumnDef="course">
+            <th mat-header-cell *matHeaderCellDef> Curso </th>
+            <td mat-cell *matCellDef="let enrollment"> {{ enrollment.course.name}} </td>
+            </ng-container>
+        <!-- user Column -->
+        <ng-container matColumnDef="user">
+            <th mat-header-cell *matHeaderCellDef> Usuario </th>
+            <td mat-cell *matCellDef="let enrollment"> {{ enrollment.user | userFullName}} </td>
+            </ng-container>
+        <!-- enrolledAt Column -->
+            <ng-container matColumnDef="enrolledAt">
+                <th mat-header-cell *matHeaderCellDef> Fecha de inscripcion </th>
+                <td mat-cell *matCellDef="let enrollment"> {{enrollment.enrolledAt | date: 'dd/MM/yyyy' }} </td>
+              </ng-container>
+  
+      <!-- Actions Column -->
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> Acciones </th>
+        <td mat-cell *matCellDef="let enrollment">
+          <button (click)="goToDetail(enrollment.id)" mat-icon-button>
+            <mat-icon>visibility</mat-icon>
+          </button>
+          <button (click)="openModal(enrollment)" mat-icon-button>
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button (click)="onDelete(enrollment.id)" mat-icon-button>
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  }
+  </div>
