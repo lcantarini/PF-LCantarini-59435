@@ -3,17 +3,22 @@ import { CommonModule } from '@angular/common';
 
 import { StudentsRoutingModule } from './students-routing.module';
 import { StudentsComponent } from './students.component';
-import { StudentsDialogComponent } from './students-dialog/students-dialog.component';
+import { StudentDialogComponent } from './student-dialog/student-dialog.component';
+import { StudentDetailComponent } from './student-detail/student-detail.component';
+import { SharedModule } from '../../../shared/shared.module';
 
 
 @NgModule({
   declarations: [
     StudentsComponent,
-    StudentsDialogComponent
+    StudentDialogComponent,
+    StudentDetailComponent,
+    StudentDialogComponent
   ],
   imports: [
     CommonModule,
-    StudentsRoutingModule
+    StudentsRoutingModule,
+    SharedModule
   ]
 })
 export class StudentsModule { }

@@ -15,7 +15,10 @@
               <div class="col-6">
                 <mat-form-field class="example-form-field w-100">
                   <mat-label>Fecha de inicio</mat-label>
-                  <input formControlName="startAt" matInput type="date" >
+                  <input formControlName="startAt" matInput [matDatepicker]="pickerStart" >
+                  <mat-hint>DD/MM/YYYY</mat-hint>
+                  <mat-datepicker-toggle matIconSuffix [for]="pickerStart"></mat-datepicker-toggle>
+                  <mat-datepicker #pickerStart></mat-datepicker>
                   <mat-error>
                     @if(courseForm.get('startAt')?.hasError('required')) { Este campo es requerido }
                   </mat-error>
@@ -24,7 +27,10 @@
             <div class="col-6">
               <mat-form-field class="example-form-field w-100">
                 <mat-label>Fecha de fin</mat-label>
-                <input formControlName="endAt" matInput type="date" >
+                <input formControlName="endAt" matInput [matDatepicker]="pickerEnd" >
+                <mat-hint>DD/MM/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="pickerEnd"></mat-datepicker-toggle>
+                <mat-datepicker #pickerEnd></mat-datepicker>
                 <mat-error>
                   @if(courseForm.get('endAt')?.hasError('required')) { Este campo es requerido }
                 </mat-error>

@@ -36,6 +36,7 @@ export class CourseDialogComponent {
 
   patchFormValue() {
     if (this.data?.editingCourse) {
+      
       this.courseForm.patchValue(this.data.editingCourse)
     }
   }

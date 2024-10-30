@@ -13,7 +13,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
 import { UserFullNamePipe } from './pipes/user-fullname.pipe';
 import { ReSizeTitleDirective } from './directives/re-size-title.directive';
-import { UserCompleteNamePipe } from './pipes/user-complete-name.pipe';
+import { studentFullNamePipe } from './pipes/student-fullname.pipe';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
@@ -24,7 +24,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     UserFullNamePipe,
     HighlightDirective,
     ReSizeTitleDirective,
-    UserCompleteNamePipe,
+    studentFullNamePipe,
   ],
   imports: [
     CommonModule
@@ -46,6 +46,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     UserFullNamePipe,
     ReSizeTitleDirective,
     MatProgressSpinnerModule,
+    studentFullNamePipe,
   ]
 })
 export class SharedModule { }

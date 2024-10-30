@@ -7,8 +7,8 @@ export let MY_COURSES_DB: Course[] = [
   {
     id: generateStringRandom(4),
     name: 'Angular',
-    startAt: new Date("2024-02-01"),
-    endAt: new Date("2024-02-01"),
+    startAt: new Date(),
+    endAt: new Date(),
     createdAt: new Date(),
 },
 {
