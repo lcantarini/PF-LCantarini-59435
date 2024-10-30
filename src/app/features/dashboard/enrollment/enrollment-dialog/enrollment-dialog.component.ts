@@ -3,6 +3,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { Enrollment } from '../models';
 import { generateStringRandom } from '../../../../shared/utils';
+import { CoursesService } from '../../../../core/services/courses.service';
+import { StudentsService } from '../../../../core/services/students.service';
+import { Student } from '../../students/models';
+import { UsersService } from '../../../../core/services/users.service';
+import { Course } from '../../courses/models';
+import { User } from '../../users/models';
 
 interface EnrollmentDialogData {
   editingEnrollment?: Enrollment;
@@ -15,9 +21,17 @@ interface EnrollmentDialogData {
 })
 export class EnrollmentDialogComponent {
   enrollmentForm: FormGroup;
+ 
+  studentsList: Student[]=[];
+  coursesList: Course[]=[];
+  usersList: User[]=[];
+
   constructor(
     private matDialogRef: MatDialogRef<EnrollmentDialogComponent>,
     private formBuilder: FormBuilder,
+    private studentsService: StudentsService,
+    private coursesService: CoursesService,
+    private usersService: UsersService,
     @Inject(MAT_DIALOG_DATA) public data?: EnrollmentDialogData
    ){
     console.log(data);
@@ -27,7 +41,28 @@ export class EnrollmentDialogComponent {
       course: [null, [Validators.required]],
       enrolledAt: [null, [Validators.required]],
     });
+    this.loadUsers();
+    this.loadCourses();
+    this.loadStudents();
     this.patchFormValue();
+  }
+
+  loadStudents(): void {
+    this.studentsService.getStudents().subscribe({
+      next: (student) => this.studentsList=student
+    });
+  }
+
+  loadUsers(): void {
+    this.usersService.getUsers().subscribe({
+      next: (user) => this.usersList = user
+    });
+  }
+
+  loadCourses(): void {
+    this.coursesService.getCourses().subscribe({
+      next: (course) => this.coursesList = course
+    });
   }
 
   private get isEditing() {

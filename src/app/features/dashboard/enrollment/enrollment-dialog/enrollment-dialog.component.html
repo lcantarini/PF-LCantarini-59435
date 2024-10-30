@@ -6,7 +6,10 @@
             <div class="col-6">
               <mat-form-field class="example-form-field w-100">
                 <mat-label>Alumno</mat-label>
-                <input formControlName="student" matInput type="text" >
+                <mat-select matNativeControl formControlName="student">
+                  <mat-option *ngFor="let student of studentsList"
+                  [value]="student">{{student | studentFullName}}</mat-option>
+                </mat-select>  
                 <mat-error>
                   @if(enrollmentForm.get('student')?.hasError('required')) { Este campo es requerido }
                 </mat-error>
@@ -15,7 +18,10 @@
             <div class="col-6">
                 <mat-form-field class="example-form-field w-100">
                   <mat-label>Curso</mat-label>
-                  <input formControlName="course" matInput type="text" >
+                  <mat-select matNativeControl formControlName="course">
+                    <mat-option *ngFor="let course of coursesList"
+                    [value]="course">{{course.name}}</mat-option>
+                  </mat-select>
                   <mat-error>
                     @if(enrollmentForm.get('course')?.hasError('required')) { Este campo es requerido }
                   </mat-error>
