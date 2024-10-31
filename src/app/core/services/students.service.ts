@@ -23,10 +23,10 @@ export class StudentsService {
 
   getStudents(): Observable<Student[]> {
     return new Observable((observer) => {
-      setInterval(() => {
+
         observer.next(MY_STUDENTS_DB);
         observer.complete();
-      }, 2000);
+
     });
   }
 
@@ -41,10 +41,10 @@ export class StudentsService {
     );
 
     return new Observable<Student[]>((observer) => {
-      setInterval(() => {
+
         observer.next(MY_STUDENTS_DB);
         observer.complete();
-      }, 1000);
+
     });
   }
 

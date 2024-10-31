@@ -7,8 +7,7 @@ import { Student } from '../../features/dashboard/students/models';
 export class studentFullNamePipe implements PipeTransform {
 
   transform(value: Student, transform?: 'uppercase'): string {
-    console.log(transform); 
-    
+    if(!!value){
     const result = value.firstName + ' ' + value.lastName;
     
     if (transform === "uppercase"){
@@ -16,7 +15,11 @@ export class studentFullNamePipe implements PipeTransform {
 
     }
 
-    return result;
+    
+      return result;
+    }else{
+      return '';
+    }
   }
 
 }

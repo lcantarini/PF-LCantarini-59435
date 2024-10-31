@@ -5,35 +5,35 @@ import { delay, map, Observable, of } from 'rxjs';
 
 export let MY_COURSES_DB: Course[] = [
   {
-    id: generateStringRandom(4),
+    id: 'ts4l',
     name: 'Angular',
     startAt: new Date(),
     endAt: new Date(),
     createdAt: new Date(),
 },
 {
-  id: generateStringRandom(4),
+  id: 't4CL',
   name: 'Api con Express JS',
   startAt: new Date(),
   endAt: new Date(),
   createdAt: new Date(),
 },
 {
-  id: generateStringRandom(4),
+  id: 'NWcZ',
   name: 'MariaDB',
   startAt: new Date(),
   endAt: new Date(),
   createdAt: new Date(),
 },
 {
-  id: generateStringRandom(4),
+  id: 'C7PA',
   name: 'React',
   startAt: new Date(),
   endAt: new Date(),
   createdAt: new Date(),
 },
 {
-  id: generateStringRandom(4),
+  id: 'Glo4',
   name: 'MongoDB',
   startAt: new Date(),
   endAt: new Date(),
@@ -55,10 +55,10 @@ export class CoursesService {
 
   getCourses(): Observable<Course[]> {
     return new Observable((observer) => {
-      setInterval(() => {
+      
         observer.next(MY_COURSES_DB);
         observer.complete();
-      }, 2000);
+     
     });
   }
 
@@ -73,10 +73,10 @@ export class CoursesService {
     );
 
     return new Observable<Course[]>((observer) => {
-      setInterval(() => {
+      
         observer.next(MY_COURSES_DB);
         observer.complete();
-      }, 1000);
+
     });
 
   }

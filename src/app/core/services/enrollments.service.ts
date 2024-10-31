@@ -27,16 +27,16 @@ export let MY_STUDENTS_DB: Student[] = [
 
 export let MY_COURSES_DB: Course[] = 
 [
-  {id: generateStringRandom(4), name: 'Angular', startAt: new Date(), endAt: new Date(), createdAt: new Date()},
-  {id: generateStringRandom(4), name: 'Api con Express JS', startAt: new Date(), endAt: new Date(), createdAt: new Date(),},
-  {id: generateStringRandom(4), name: 'MariaDB', startAt: new Date(), endAt: new Date(), createdAt: new Date(),},
+  {id: 'ts4l', name: 'Angular', startAt: new Date(), endAt: new Date(), createdAt: new Date()},
+  {id: 't4CL', name: 'Api con Express JS', startAt: new Date(), endAt: new Date(), createdAt: new Date(),},
+  {id: 'NWcZ', name: 'MariaDB', startAt: new Date(), endAt: new Date(), createdAt: new Date(),},
 ];
 export let MY_ENROLLMENTS_DB: Enrollment[] = 
 [
-  {id: generateStringRandom(4), student: MY_STUDENTS_DB[0], course: MY_COURSES_DB[0], user: MY_USERS_DB[0], enrolledAt: new Date()},
-  {id: generateStringRandom(4), student: MY_STUDENTS_DB[0], course: MY_COURSES_DB[1], user: MY_USERS_DB[0], enrolledAt: new Date()},
-  {id: generateStringRandom(4), student: MY_STUDENTS_DB[2], course: MY_COURSES_DB[2], user: MY_USERS_DB[2], enrolledAt: new Date()},
-  {id: generateStringRandom(4), student: MY_STUDENTS_DB[1], course: MY_COURSES_DB[1], user: MY_USERS_DB[1], enrolledAt: new Date()},
+  {id: 'Jhhj', student: MY_STUDENTS_DB[0], course: MY_COURSES_DB[0], user: MY_USERS_DB[0], enrolledAt: new Date()},
+  {id: 'CBDb', student: MY_STUDENTS_DB[0], course: MY_COURSES_DB[1], user: MY_USERS_DB[0], enrolledAt: new Date()},
+  {id: 'vMaD', student: MY_STUDENTS_DB[2], course: MY_COURSES_DB[2], user: MY_USERS_DB[2], enrolledAt: new Date()},
+  {id: 'BDVF', student: MY_STUDENTS_DB[1], course: MY_COURSES_DB[1], user: MY_USERS_DB[1], enrolledAt: new Date()},
   ];
 
 @Injectable({
@@ -52,28 +52,28 @@ export class EnrollmentsService {
 
   getEnrollments(): Observable<Enrollment[]> {
     return new Observable((observer) => {
-      setInterval(() => {
+
         observer.next(MY_ENROLLMENTS_DB);
         observer.complete();
-      }, 2000);
+
     });
   }
 
   removeEnrollmentById(id: string): Observable<Enrollment[]> {
     MY_ENROLLMENTS_DB = MY_ENROLLMENTS_DB.filter((e) => e.id !== id);
-    return of(MY_ENROLLMENTS_DB).pipe(delay(1000));
+    return of(MY_ENROLLMENTS_DB);
   }
 
-  updateUserById(id: string, update: Partial<Course>) {
-    MY_COURSES_DB = MY_COURSES_DB.map((course) =>
-      course.id === id ? { ...course, ...update } : course
+  updateEnrollmentById(id: string, update: Partial<Enrollment>) {
+    MY_ENROLLMENTS_DB = MY_ENROLLMENTS_DB.map((enrollment) =>
+      enrollment.id === id ? { ...enrollment, ...update } : enrollment
     );
 
     return new Observable<Enrollment[]>((observer) => {
-      setInterval(() => {
+
         observer.next(MY_ENROLLMENTS_DB);
         observer.complete();
-      }, 1000);
+
     });
 
   }

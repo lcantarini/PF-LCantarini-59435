@@ -39,7 +39,6 @@ export class EnrollmentDialogComponent {
     this.enrollmentForm = this.formBuilder.group({
       student: [null, [Validators.required]],
       course: [null, [Validators.required]],
-      enrolledAt: [null, [Validators.required]],
     });
     this.loadUsers();
     this.loadCourses();
@@ -71,12 +70,14 @@ export class EnrollmentDialogComponent {
 
   patchFormValue() {
     if (this.data?.editingEnrollment) {
-      
-      this.enrollmentForm.patchValue(this.data.editingEnrollment)
+      const course = this.coursesList.find(c=>c.id===this.data?.editingEnrollment?.course.id);
+      const student = this.studentsList.find(s=>s.id===this.data?.editingEnrollment?.student.id);
+      this.enrollmentForm.patchValue({...this.data.editingEnrollment,course,student});
     }
   }
 
   onSave(): void {
+    console.log(this.enrollmentForm.value);
     if (this.enrollmentForm.invalid){
       this.enrollmentForm.markAllAsTouched();
     } else {
@@ -85,7 +86,7 @@ export class EnrollmentDialogComponent {
         id: this.isEditing
          ? this.data!.editingEnrollment!.id 
          : generateStringRandom(4),
-        createdAt: this.isEditing
+        enrolledAt: this.isEditing
         ? this.data!.editingEnrollment!.enrolledAt
         : new Date(),
       });

@@ -90,7 +90,7 @@ export class EnrollmentComponent implements OnInit {
 
   handleUpdate(id: string, update: Enrollment): void {
     this.isLoading = true;
-    this.enrollmentsService.updateUserById(id, update).subscribe({
+    this.enrollmentsService.updateEnrollmentById(id, update).subscribe({
       next: (enrollments) => {
         this.dataSource = enrollments;
       },

@@ -7,16 +7,18 @@ import { User } from '../../features/dashboard/users/models';
 export class UserFullNamePipe implements PipeTransform {
 
   transform(value: User, transform?: 'uppercase'): string {
-    console.log(transform); 
-    
+    if(!!value){
     const result = value.firstName + ' ' + value.lastName;
     
     if (transform === "uppercase"){
       return `${result}`.toUpperCase();
 
     }
-
-    return result;
+      return result;
+    }else{
+      return '';
+    }
+    
   }
 
 }

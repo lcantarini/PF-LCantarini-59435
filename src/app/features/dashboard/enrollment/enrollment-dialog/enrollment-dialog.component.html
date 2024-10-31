@@ -27,18 +27,6 @@
                   </mat-error>
                 </mat-form-field>
               </div>
-            <div class="col-6">
-              <mat-form-field class="example-form-field w-100">
-                <mat-label>Fecha de inscripcion</mat-label>
-                <input formControlName="enrolledAt" matInput [matDatepicker]="pickerEnd" >
-                <mat-hint>DD/MM/YYYY</mat-hint>
-                <mat-datepicker-toggle matIconSuffix [for]="pickerEnd"></mat-datepicker-toggle>
-                <mat-datepicker #pickerEnd></mat-datepicker>
-                <mat-error>
-                  @if(enrollmentForm.get('enrolledAt')?.hasError('required')) { Este campo es requerido }
-                </mat-error>
-              </mat-form-field>
-          </div>
           </div>
     </form>
 </div>
