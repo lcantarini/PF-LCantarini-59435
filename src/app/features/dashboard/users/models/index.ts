@@ -6,5 +6,6 @@ export interface User {
     createdAt: Date;
     password: string;
     token: string;
+    profile: 'ADMIN' | 'USER'
 }
 

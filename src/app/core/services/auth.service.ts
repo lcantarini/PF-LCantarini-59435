@@ -4,6 +4,7 @@ import { BehaviorSubject, Observable, of, throwError } from 'rxjs';
 import { User } from '../../features/dashboard/users/models';
 import { generateStringRandom } from '../../shared/utils';
 import { Router } from '@angular/router';
+import { UsersService } from './users.service';
 
 const FAKE_USER: User = {
   email: 'admin@mail.com',
@@ -13,6 +14,7 @@ const FAKE_USER: User = {
   createdAt: new Date(),
   password: '123456',
   token: 'abcdefghiasdasdasdlsadsalasdasfdsfsdf103232',
+  profile: 'ADMIN'
 };
 
 @Injectable({ providedIn: 'root' })
@@ -21,7 +23,10 @@ export class AuthService {
 
   public authUser$ = this._authUser$.asObservable();
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router, 
+    private usersService: UsersService,
+  ) {}
 
   login(data: AuthData): Observable<User> {
     if (data.email != FAKE_USER.email || data.password != FAKE_USER.password) {

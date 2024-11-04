@@ -7,7 +7,8 @@
       "createdAt": "2024-10-24T00:15:26.790Z",
       "email": "Hydrogen@gmail.com",
       "password": "uno23456",
-      "token": "1q2223er45t666667ui889op0"
+      "token": "1q2223er45t666667ui889op0",
+      "profile": "ADMIN"
     },
     {
       "id": "2",
@@ -16,7 +17,8 @@
       "createdAt": "2024-10-24T00:15:26.790Z",
       "email": "Helium@gmail.com",
       "password": "uno23456",
-      "token": "1q2223er45t666667ui889op0"
+      "token": "1q2223er45t666667ui889op0",
+      "profile": "USER"
     },
     {
       "id": "3",
@@ -25,7 +27,8 @@
       "createdAt": "2024-10-24T00:15:26.790Z",
       "email": "Lithium@gmail.com",
       "password": "uno23456",
-      "token": "1q2223er45t666667ui889op0"
+      "token": "1q2223er45t666667ui889op0",
+      "profile": "USER"
     },
     {
       "id": "4",
@@ -34,7 +37,8 @@
       "createdAt": "2024-10-24T00:15:26.790Z",
       "email": "Beryllium@gmail.com",
       "password": "uno23456",
-      "token": "1q2223er45t666667ui889op0"
+      "token": "1q2223er45t666667ui889op0",
+      "profile": "USER"
     },
     {
       "id": "5",
@@ -43,7 +47,8 @@
       "createdAt": "2024-10-24T00:15:26.790Z",
       "email": "Boron@gmail.com",
       "password": "uno23456",
-      "token": "1q2223er45t666667ui889op0"
+      "token": "1q2223er45t666667ui889op0",
+      "profile": "USER"
     },
     {
       "id": "6",
@@ -52,7 +57,8 @@
       "createdAt": "2024-10-24T00:15:26.790Z",
       "email": "Carbon@gmail.com",
       "password": "uno23456",
-      "token": "1q2223er45t666667ui889op0"
+      "token": "1q2223er45t666667ui889op0",
+      "profile": "ADMIN"
     },
     {
       "id": "7",
@@ -61,7 +67,8 @@
       "createdAt": "2024-10-24T00:15:26.790Z",
       "email": "Nitrogen@gmail.com",
       "password": "uno23456",
-      "token": "1q2223er45t666667ui889op0"
+      "token": "1q2223er45t666667ui889op0",
+      "profile": "USER"
     },
     {
       "id": "8",
@@ -70,7 +77,8 @@
       "createdAt": "2024-10-24T00:15:26.790Z",
       "email": "Oxygen@gmail.com",
       "password": "uno23456",
-      "token": "1q2223er45t666667ui889op0"
+      "token": "1q2223er45t666667ui889op0",
+      "profile": "USER"
     },
     {
       "id": "9",
@@ -79,7 +87,8 @@
       "createdAt": "2024-10-24T00:15:26.790Z",
       "email": "Fluorine@gmail.com",
       "password": "uno23456",
-      "token": "1q2223er45t666667ui889op0"
+      "token": "1q2223er45t666667ui889op0",
+      "profile": "USER"
     },
     {
       "id": "10",
@@ -88,16 +97,60 @@
       "createdAt": "2024-10-24T00:15:26.790Z",
       "email": "Neon@gmail.com",
       "password": "uno23456",
-      "token": "1q2223er45t666667ui889op0"
-    },
-    {
-      "id": "5ad4",
-      "firstName": "Leo",
-      "lastName": "Canta",
-      "createdAt": "2024-10-24T00:15:26.790Z",
-      "email": "Lc@gmail.com",
-      "password": "uno23456",
-      "token": "1q2223er45t666667ui889op0"
+      "token": "1q2223er45t666667ui889op0",
+      "profile": "USER"
     }
+   ],
+   "Courses" : [
+    {
+      "id": "ts4l",
+      "name": "Angular",
+      "startAt": "2024-10-24T00:15:26.790Z",
+      "endAt": "2024-10-24T00:15:26.790Z",
+      "createdAt": "2024-10-24T00:15:26.790Z"
+  },
+  {
+    "id": "t4CL",
+    "name": "Api con Express JS",
+    "startAt": "2024-10-24T00:15:26.790Z",
+    "endAt": "2024-10-24T00:15:26.790Z",
+    "createdAt": "2024-10-24T00:15:26.790Z"
+  },
+  {
+    "id": "NWcZ",
+    "name": "MariaDB",
+    "startAt": "2024-10-24T00:15:26.790Z",
+    "endAt": "2024-10-24T00:15:26.790Z",
+    "createdAt": "2024-10-24T00:15:26.790Z"
+  },
+  {
+    "id": "C7PA",
+    "name": "React",
+    "startAt": "2024-10-24T00:15:26.790Z",
+    "endAt": "2024-10-24T00:15:26.790Z",
+    "createdAt": "2024-10-24T00:15:26.790Z"
+  },
+  {
+    "id": "Glo4",
+    "name": "MongoDB",
+    "startAt": "2024-10-24T00:15:26.790Z",
+    "endAt": "2024-10-24T00:15:26.790Z",
+    "createdAt": "2024-10-24T00:15:26.790Z"
+  }
+  ],
+  "Students" : [
+    {"id": "1", "firstName": "Hydrogen",  "lastName": "Gonzalez", "createdAt": "2024-10-24T00:15:26.790Z", "email": "Hydrogen@gmail.com"},
+    {"id": "2", "firstName": "Helium", "lastName": "Gomez", "createdAt": "2024-10-24T00:15:26.790Z", "email": "Helium@gmail.com"},
+    {"id": "3", "firstName": "Lithium", "lastName": "Perez", "createdAt": "2024-10-24T00:15:26.790Z", "email": "Lithium@gmail.com"},
+    {"id": "4", "firstName": "Beryllium", "lastName": "Fernandez", "createdAt": "2024-10-24T00:15:26.790Z", "email": "Beryllium@gmail.com"},
+    {"id": "5", "firstName": "Boron", "lastName": "Aguilera", "createdAt": "2024-10-24T00:15:26.790Z", "email": "Boron@gmail.com"}
+  ],
+  "Enrollments" : 
+  [
+    {"id": "Jhhj", "student": "0", "course": "0", "user": "0", "enrolledAt": "2024-10-24T00:15:26.790Z"},
+    {"id": "CBDb", "student": "0", "course": "1", "user": "0", "enrolledAt": "2024-10-24T00:15:26.790Z"},
+    {"id": "vMaD", "student": "2", "course": "2", "user": "2", "enrolledAt": "2024-10-24T00:15:26.790Z"},
+    {"id": "BDVF", "student": "1", "course": "1", "user": "1", "enrolledAt": "2024-10-24T00:15:26.790Z"}
   ]
 }
+

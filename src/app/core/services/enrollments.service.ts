@@ -14,9 +14,9 @@ import { delay, map, Observable, of } from 'rxjs';
 // enrollAt: Date;
 
 export let MY_USERS_DB: User[] = [
-  {id: '1', firstName: 'Hydrogen',  lastName: 'Gonzalez', createdAt: new Date(), email: 'Hydrogen@gmail.com', password: 'uno23456', token: generateStringRandom(20)},
-  {id: '2', firstName: 'Helium', lastName: 'Gomez', createdAt: new Date(), email: 'Helium@gmail.com', password: 'uno23456', token: generateStringRandom(20)},
-  {id: '3', firstName: 'Lithium', lastName: 'Perez', createdAt: new Date(), email: 'Lithium@gmail.com', password: 'uno23456', token: generateStringRandom(20)},
+  {id: '1', firstName: 'Hydrogen',  lastName: 'Gonzalez', createdAt: new Date(), email: 'Hydrogen@gmail.com', password: 'uno23456', token: generateStringRandom(20), profile: 'ADMIN'},
+  {id: '2', firstName: 'Helium', lastName: 'Gomez', createdAt: new Date(), email: 'Helium@gmail.com', password: 'uno23456', token: generateStringRandom(20), profile: 'USER'},
+  {id: '3', firstName: 'Lithium', lastName: 'Perez', createdAt: new Date(), email: 'Lithium@gmail.com', password: 'uno23456', token: generateStringRandom(20), profile: 'USER'},
 ];
 
 export let MY_STUDENTS_DB: Student[] = [
