@@ -8,6 +8,7 @@ import { AuthModule } from './features/auth/auth.module';
 import { DashboardModule } from './features/dashboard/dashboard.module';
 import { EnrollmentComponent } from './features/dashboard/enrollment/enrollment.component';
 import { ClassComponent } from './features/dashboard/class/class.component';
+import { authGuard } from './core/guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -17,6 +18,7 @@ const routes: Routes = [
   },
   {
     path: 'dashboard',
+    canActivate: [authGuard],
     component: DashboardComponent,
     loadChildren: () => DashboardModule
   },
