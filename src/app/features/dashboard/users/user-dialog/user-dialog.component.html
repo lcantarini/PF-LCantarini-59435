@@ -30,6 +30,35 @@
                 </mat-error>
               </mat-form-field>
           </div>
+          <div class="col-6">
+            <mat-form-field class="w-100">
+              <mat-label>Contrasena</mat-label>
+              <input formControlName="password" [type]="passwordInputType" matInput />
+              <button
+                type="button"
+                (click)="togglePasswordInputType()"
+                matSuffix
+                mat-icon-button
+              >
+                <mat-icon>visibility</mat-icon>
+              </button>
+              <mat-error>
+                @if(userForm.get('email')?.hasError('required')) { Este campo es requerido }
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-6">
+            <mat-form-field class="example-form-field w-100">
+              <mat-label>Perfil</mat-label>
+              <mat-select matNativeControl formControlName="profile">
+                <mat-option value="ADMIN">ADMIN</mat-option>
+                <mat-option value="USER">USER</mat-option>
+              </mat-select>
+              <mat-error>
+                @if(userForm.get('profile')?.hasError('required')) { Este campo es requerido }
+              </mat-error>
+            </mat-form-field>
+          </div>
           </div>
     </form>
 </div>

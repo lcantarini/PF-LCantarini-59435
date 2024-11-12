@@ -14,6 +14,7 @@ interface UserDialogData {
   styles: ``
 })
 export class UserDialogComponent {
+  passwordInputType: 'password' | 'text' = 'password';
   userForm: FormGroup;
   constructor(
     private matDialogRef: MatDialogRef<UserDialogComponent>,
@@ -26,6 +27,8 @@ export class UserDialogComponent {
       firstName: [null, [Validators.required,Validators.pattern('^[a-zA-Z ]+$')]],
       lastName: [null, [Validators.required]],
       email: [null, [Validators.required,Validators.email]],
+      password: [null, [Validators.required]],
+      profile: [null, [Validators.required]]
     });
     this.patchFormValue();
   }
@@ -37,6 +40,14 @@ export class UserDialogComponent {
   patchFormValue() {
     if (this.data?.editingUser) {
       this.userForm.patchValue(this.data.editingUser)
+    }
+  }
+
+  togglePasswordInputType(): void {
+    if (this.passwordInputType === 'password') {
+      this.passwordInputType = 'text';
+    } else {
+      this.passwordInputType = 'password';
     }
   }
 

@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { User } from '../../features/dashboard/users/models';
 import { generateStringRandom } from '../../shared/utils';
-import { delay, map, Observable, of } from 'rxjs';
+import { concatAll, concatMap, delay, map, Observable, of } from 'rxjs';
+import { environment } from '../../../environments/environment.development';
+import { HttpClient } from '@angular/common/http';
 
 export let MY_USERS_DB: User[] = [
   {id: '1', firstName: 'Hydrogen',  lastName: 'Gonzalez', createdAt: new Date(), email: 'Hydrogen@gmail.com', password: 'uno23456', token: generateStringRandom(20), profile: 'ADMIN'},
@@ -21,43 +23,36 @@ export let MY_USERS_DB: User[] = [
 })
 export class UsersService {
 
-  constructor() {}
+  private baseURL = environment.apiBaseURL;
+
+  constructor( private httpClient: HttpClient) {}
 
   getById(id: string): Observable<User | undefined> {
-    return this.getUsers().pipe(map((users) => users.find((u) => u.id === id)));
+    return this.httpClient.get<User>(`${this.baseURL}/users/${id}`);
   }
 
   getUsers(): Observable<User[]> {
-    return new Observable((observer) => {
-
-        observer.next(MY_USERS_DB);
-        observer.complete();
-
-    });
+      return this.httpClient.get<User[]>(`${this.baseURL}/users`)
   }
 
   removeUserById(id: string): Observable<User[]> {
-    MY_USERS_DB = MY_USERS_DB.filter((user) => user.id != id);
-    return of(MY_USERS_DB).pipe(delay(1000));
+    return this.httpClient
+      .delete<User>(`${this.baseURL}/users/${id}`)
+      .pipe(concatMap(() => this.getUsers()));
   }
 
   updateUserById(id: string, update: Partial<User>) {
-    MY_USERS_DB = MY_USERS_DB.map((user) =>
-      user.id === id ? { ...user, ...update } : user
-    );
-
-    return new Observable<User[]>((observer) => {
-
-        observer.next(MY_USERS_DB);
-        observer.complete();
-
-    });
+    return this.httpClient
+      .patch<User>(`${this.baseURL}/users/${id}`, update)
+      .pipe(concatMap(() => this.getUsers()));
   }
 
-  insertUser(user: User) : Observable<User[]> {
-    MY_USERS_DB = [ ...MY_USERS_DB, user ];
-
-    return of(MY_USERS_DB);
+  insertUser(data: Omit<User, 'id'>) : Observable<User> {
+    return this.httpClient.post<User>(`${this.baseURL}/users`, {
+      ...data,
+      token: generateStringRandom(20),
+      createdAt: new Date().toISOString(),
+    });
   }
 
 }

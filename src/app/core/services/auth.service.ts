@@ -6,6 +6,7 @@ import { generateStringRandom } from '../../shared/utils';
 import { Router } from '@angular/router';
 import { UsersService } from './users.service';
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../../../environments/environment.development';
 
 
 @Injectable({ providedIn: 'root' })
@@ -13,6 +14,8 @@ export class AuthService {
   private _authUser$ = new BehaviorSubject<null | User>(null);
 
   public authUser$ = this._authUser$.asObservable();
+
+  private baseURL = environment.apiBaseURL;
 
   constructor(
     private router: Router, 
@@ -33,7 +36,7 @@ export class AuthService {
 
     return this.httpClient
       .get<User[]>(
-        `http://localhost:3000/users?email=${data.email}&password=${data.password}`
+        `${this.baseURL}/users?email=${data.email}&password=${data.password}`
       )
       .pipe(map((users) => {
         const user = this.handleAuthentication(users);
@@ -55,7 +58,7 @@ export class AuthService {
 
   verifyToken(): Observable<boolean> {
 
-    return this.httpClient.get<User[]>(`http://localhost:3000/users?token=${ localStorage.getItem('token')}`
+    return this.httpClient.get<User[]>(`${this.baseURL}/users?token=${ localStorage.getItem('token')}`
   ).pipe(map((users) => {
     const user = this.handleAuthentication(users);
     return !!user;

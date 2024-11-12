@@ -4,6 +4,7 @@ import { LoginComponent } from '../auth/login/login.component';
 import { Observable } from 'rxjs';
 import { User } from './users/models';
 import { AuthService } from '../../core/services/auth.service';
+import { environment } from '../../../environments/environment.development';
 
 @Component({
   selector: 'app-dashboard',

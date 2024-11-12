@@ -12,7 +12,7 @@ import { UsersService } from '../../../core/services/users.service';
 })
 export class UsersComponent implements OnInit {
 
-  displayedColumns: string[] = ['id', 'name', 'email', 'createdAt', 'actions' ];
+  displayedColumns: string[] = ['id', 'name', 'email','profile', 'createdAt', 'actions' ];
   dataSource: User[] = [];
 
   isLoading = false;
@@ -107,7 +107,7 @@ export class UsersComponent implements OnInit {
     this.isLoading = true;
     this.usersService.insertUser(update).subscribe({
       next: (users) => {
-        this.dataSource = users;
+        this.loadUsers()
       },
       error: (err) => {
         this.isLoading = false;
