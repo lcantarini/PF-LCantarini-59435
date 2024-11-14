@@ -2,7 +2,7 @@
   "users": [
     {
       "id": "1",
-      "firstName": "Hydrogen",
+      "firstName": "Hydrogeno",
       "lastName": "Gonzalez",
       "createdAt": "2024-10-24T00:15:26.790Z",
       "email": "Hydrogen@gmail.com",
@@ -109,29 +109,9 @@
       "password": "123456",
       "token": "1q2223er45t45607ui123op0",
       "profile": "ADMIN"
-    },
-    {
-      "id": "jeoT",
-      "firstName": "Matias",
-      "lastName": "Candeloro",
-      "email": "mc@gmail.com",
-      "password": "1234567",
-      "profile": "ADMIN",
-      "createdAt": "2024-11-12T02:04:27.697Z",
-      "token": "ADpW6z7Yd1GU3WKSpijb"
-    },
-    {
-      "id": "6t2n",
-      "firstName": "Diego",
-      "lastName": "C",
-      "email": "dc@gmail.com",
-      "password": "12345",
-      "profile": "USER",
-      "createdAt": "2024-11-12T02:05:01.394Z",
-      "token": "qto4CMEjwmuo7WJDcEVH"
     }
   ],
-  "Courses": [
+  "courses": [
     {
       "id": "ts4l",
       "name": "Angular",
@@ -168,7 +148,7 @@
       "createdAt": "2024-10-24T00:15:26.790Z"
     }
   ],
-  "Students": [
+  "students": [
     {
       "id": "1",
       "firstName": "Hydrogen",
@@ -205,7 +185,7 @@
       "email": "Boron@gmail.com"
     }
   ],
-  "Enrollments": [
+  "enrollments": [
     {
       "id": "Jhhj",
       "student": "0",

@@ -21,7 +21,6 @@ export class UserDialogComponent {
     private formBuilder: FormBuilder,
     @Inject(MAT_DIALOG_DATA) public data?: UserDialogData
    ){
-    console.log(data);
 
     this.userForm = this.formBuilder.group({
       firstName: [null, [Validators.required,Validators.pattern('^[a-zA-Z ]+$')]],

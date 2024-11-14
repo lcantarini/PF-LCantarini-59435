@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { StudentsService } from '../../../core/services/students.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
@@ -10,7 +10,7 @@ import { StudentDialogComponent } from './student-dialog/student-dialog.componen
   templateUrl: './students.component.html',
   styleUrl: './students.component.scss'
 })
-export class StudentsComponent {
+export class StudentsComponent implements OnInit{
 
   displayedColumns: string[] = ['id', 'name', 'email', 'createdAt', 'actions' ];
   dataSource: Student[] = [];
@@ -107,7 +107,7 @@ export class StudentsComponent {
     this.isLoading = true;
     this.studentsService.insertStudent(update).subscribe({
       next: (student) => {
-        this.dataSource = student;
+        this.loadStudents();
       },
       error: (err) => {
         this.isLoading = false;

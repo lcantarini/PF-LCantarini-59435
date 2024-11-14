@@ -15,6 +15,7 @@ import { UserFullNamePipe } from './pipes/user-fullname.pipe';
 import { ReSizeTitleDirective } from './directives/re-size-title.directive';
 import { studentFullNamePipe } from './pipes/student-fullname.pipe';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import {MatListModule} from '@angular/material/list';
 
 
 
@@ -47,6 +48,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     ReSizeTitleDirective,
     MatProgressSpinnerModule,
     studentFullNamePipe,
+    MatListModule
   ]
 })
 export class SharedModule { }

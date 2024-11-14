@@ -1,90 +1,46 @@
 import { Injectable } from '@angular/core';
 import { Course } from '../../features/dashboard/courses/models';
 import { generateStringRandom } from '../../shared/utils';
-import { delay, map, Observable, of } from 'rxjs';
+import { concatMap, delay, map, Observable, of } from 'rxjs';
+import { environment } from '../../../environments/environment';
+import { HttpClient } from '@angular/common/http';
 
-export let MY_COURSES_DB: Course[] = [
-  {
-    id: 'ts4l',
-    name: 'Angular',
-    startAt: new Date(),
-    endAt: new Date(),
-    createdAt: new Date(),
-},
-{
-  id: 't4CL',
-  name: 'Api con Express JS',
-  startAt: new Date(),
-  endAt: new Date(),
-  createdAt: new Date(),
-},
-{
-  id: 'NWcZ',
-  name: 'MariaDB',
-  startAt: new Date(),
-  endAt: new Date(),
-  createdAt: new Date(),
-},
-{
-  id: 'C7PA',
-  name: 'React',
-  startAt: new Date(),
-  endAt: new Date(),
-  createdAt: new Date(),
-},
-{
-  id: 'Glo4',
-  name: 'MongoDB',
-  startAt: new Date(),
-  endAt: new Date(),
-  createdAt: new Date(),
-}
-
-];
 
 @Injectable({
   providedIn: 'root'
 })
 export class CoursesService {
+  
+  private baseURL = environment.apiBaseURL;
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
   getById(id: string): Observable<Course | undefined > {
-    return this.getCourses().pipe(map((courses) => courses.find((c) => c.id === id)));
+    return this.httpClient.get<Course>(`${this.baseURL}/courses/${id}`);
   }
 
   getCourses(): Observable<Course[]> {
-    return new Observable((observer) => {
-      
-        observer.next(MY_COURSES_DB);
-        observer.complete();
-     
-    });
+    return this.httpClient.get<Course[]>(`${this.baseURL}/courses`);
   }
 
   removeCourseById(id: string): Observable<Course[]> {
-    MY_COURSES_DB = MY_COURSES_DB.filter((c) => c.id !== id);
-    return of(MY_COURSES_DB).pipe(delay(1000));
+    return this.httpClient
+      .delete<Course>(`${this.baseURL}/courses/${id}`)
+      .pipe(concatMap(() => this.getCourses()));
   }
 
   updateCourseById(id: string, update: Partial<Course>) {
-    MY_COURSES_DB = MY_COURSES_DB.map((course) =>
-      course.id === id ? { ...course, ...update } : course
-    );
-
-    return new Observable<Course[]>((observer) => {
-      
-        observer.next(MY_COURSES_DB);
-        observer.complete();
-
-    });
+    return this.httpClient
+      .patch<Course>(`${this.baseURL}/courses/${id}`, update)
+      .pipe(concatMap(() => this.getCourses()));
 
   }
 
-  insertCourse(course: Course) : Observable<Course[]> {
-    MY_COURSES_DB = [ ...MY_COURSES_DB, course ];
-
-    return of(MY_COURSES_DB);
+  insertCourse(data: Omit<Course, 'id'>) : Observable<Course> {
+    return this.httpClient.post<Course>(`${this.baseURL}/courses`, {
+      ...data,
+      createdAt: new Date().toISOString(),
+    });
   }
 
 

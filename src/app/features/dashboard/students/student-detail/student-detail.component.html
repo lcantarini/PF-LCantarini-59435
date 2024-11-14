@@ -1,1 +1,17 @@
-<p>student-detail works!</p>
+<mat-card class="example-card" appearance="outlined">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Detalle del alumno: {{ studentDetailed?.firstName }} {{ studentDetailed?.lastName }}</mat-card-title>
+      <mat-card-subtitle>Id: {{ studentDetailed?.id }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src='../../../../assets/img/DefaultProfile.jpg' alt="ProfilePicture">
+    <mat-card-content>
+        <mat-list>
+            <mat-list-item>Id: {{ studentDetailed?.id }}</mat-list-item>
+            <mat-list-item>Nombre: {{ studentDetailed?.firstName }}</mat-list-item>
+            <mat-list-item>Apellido: {{ studentDetailed?.lastName }}</mat-list-item>
+            <mat-list-item>Correo electronico	: {{ studentDetailed?.email }}</mat-list-item>
+            <mat-list-item>Fecha de creación: {{studentDetailed?.createdAt | date: 'dd/MM/yyyy' }} </mat-list-item>
+        </mat-list>
+    </mat-card-content>
+  </mat-card>

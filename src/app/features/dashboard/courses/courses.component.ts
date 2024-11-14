@@ -106,7 +106,7 @@ export class CoursesComponent implements OnInit {
     this.isLoading = true;
     this.coursesService.insertCourse(update).subscribe({
       next: (courses) => {
-        this.dataSource = courses;
+        this.loadCourses();
       },
       error: (err) => {
         this.isLoading = false;

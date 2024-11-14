@@ -6,6 +6,8 @@ import { Course } from '../../features/dashboard/courses/models';
 import { User } from '../../features/dashboard/users/models';
 import { UsersService } from './users.service';
 import { delay, map, Observable, of } from 'rxjs';
+import { environment } from '../../../environments/environment';
+import { HttpClient } from '@angular/common/http';
 
 // id: string;
 // student: Student;
@@ -44,7 +46,9 @@ export let MY_ENROLLMENTS_DB: Enrollment[] =
 })
 export class EnrollmentsService {
 
-  constructor() { }
+  private baseURL = environment.apiBaseURL;
+
+  constructor(private httpClient: HttpClient) { }
 
   getById(id: string): Observable<Enrollment | undefined > {
     return this.getEnrollments().pipe(map((enrollments) => enrollments.find((e) => e.id === id)));
