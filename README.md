@@ -1,4 +1,17 @@
-# PFLCantarini
+# PFLCantarini-59435
+
+This project was created with the purpose to learn and understand an Angular front end example of real world system. Also this project is the Final Work of the Coderhouse's Angular course.
+
+## LOGIN CREDENTIALS
+
+## ADMIN
+User: admin@gmail.com
+Pass: 123456
+
+## USER
+User: user@gmail.com
+pass: 123456
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3.
 

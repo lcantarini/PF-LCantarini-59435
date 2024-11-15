@@ -8,7 +8,7 @@ export class ReSizeTitleDirective implements OnInit {
   fontSize = '20px';
 
   constructor(private el: ElementRef<HTMLElement>) {
-    console.log(this.el)
+
     this.applyStyles();
    }
   ngOnInit(): void {

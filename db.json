@@ -109,6 +109,26 @@
       "password": "123456",
       "token": "1q2223er45t45607ui123op0",
       "profile": "ADMIN"
+    },
+    {
+      "id": "RUtT",
+      "firstName": "Admin",
+      "lastName": "Admin",
+      "email": "admin@gmail.com",
+      "password": "123456",
+      "profile": "ADMIN",
+      "createdAt": "2024-11-15T19:07:19.364Z",
+      "token": "BhzVPlLBQTmsfabpQFcT"
+    },
+    {
+      "id": "RreV",
+      "firstName": "User",
+      "lastName": "User",
+      "email": "user@gmail.com",
+      "password": "123456",
+      "profile": "USER",
+      "createdAt": "2024-11-15T19:07:52.773Z",
+      "token": "Mb6tPxMUpS8LTv8Gz3cJ"
     }
   ],
   "courses": [
@@ -148,23 +168,11 @@
       "createdAt": "2024-10-24T00:15:26.790Z"
     },
     {
-      "id": "8HfI",
-      "student": {
-        "id": "2",
-        "firstName": "Helium",
-        "lastName": "Gomez",
-        "createdAt": "2024-10-24T00:15:26.790Z",
-        "email": "Helium@gmail.com"
-      },
-      "course": {
-        "id": "Glo4",
-        "name": "MongoDB",
-        "startAt": "2024-10-24T00:15:26.790Z",
-        "endAt": "2024-10-24T00:15:26.790Z",
-        "createdAt": "2024-10-24T00:15:26.790Z"
-      },
-      "enrolledAt": "2024-11-14T20:24:24.569Z",
-      "createdAt": "2024-11-14T20:24:24.649Z"
+      "id": "0mzz",
+      "name": "Java",
+      "startAt": "2024-11-19T03:00:00.000Z",
+      "endAt": "2024-11-26T03:00:00.000Z",
+      "createdAt": "2024-11-15T19:52:41.368Z"
     }
   ],
   "students": [
@@ -265,6 +273,13 @@
       "courseId": "C7PA",
       "userId": "99e9",
       "enrolledAt": "2024-11-15T14:06:29.670Z"
+    },
+    {
+      "id": "2c15",
+      "studentId": "4",
+      "courseId": "0mzz",
+      "userId": "99e9",
+      "enrolledAt": "2024-11-15T19:52:58.254Z"
     }
   ]
 }

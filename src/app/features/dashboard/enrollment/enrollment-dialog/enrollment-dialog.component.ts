@@ -35,7 +35,7 @@ export class EnrollmentDialogComponent {
     private authService: AuthService,
     @Inject(MAT_DIALOG_DATA) public data?: EnrollmentDialogData
    ){
-    console.log(data);
+
 
     this.enrollmentForm = this.formBuilder.group({
       studentId: [null, [Validators.required]],

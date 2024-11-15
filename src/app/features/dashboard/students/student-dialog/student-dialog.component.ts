@@ -20,7 +20,6 @@ export class StudentDialogComponent {
     private formBuilder: FormBuilder,
     @Inject(MAT_DIALOG_DATA) public data?: StudentDialogData
    ){
-    console.log(data);
 
     this.studentForm = this.formBuilder.group({
       firstName: [null, [Validators.required,Validators.pattern('^[a-zA-Z ]+$')]],

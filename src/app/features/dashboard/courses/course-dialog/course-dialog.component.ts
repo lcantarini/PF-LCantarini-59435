@@ -21,7 +21,6 @@ export class CourseDialogComponent {
     private formBuilder: FormBuilder,
     @Inject(MAT_DIALOG_DATA) public data?: CourseDialogData
    ){
-    console.log(data);
 
     this.courseForm = this.formBuilder.group({
       name: [null, [Validators.required]],

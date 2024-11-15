@@ -8,7 +8,7 @@ export class HighlightDirective implements OnChanges {
 color = 'yellow';
 
   constructor(private el: ElementRef<HTMLElement>) {
-    console.log(this.el)
+    
     this.el.nativeElement.style.backgroundColor = 'yellow';
    }
 

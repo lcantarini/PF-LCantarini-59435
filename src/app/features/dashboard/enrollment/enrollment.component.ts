@@ -80,8 +80,6 @@ export class EnrollmentComponent implements OnInit {
             if (editingEnrollment) {
               this.handleUpdate(editingEnrollment.id, result);
             } else {
-              console.log("---")
-              console.log(result);
               this.handleInsert(result);
             }
             
