@@ -9,6 +9,7 @@ import { Student } from '../../students/models';
 import { UsersService } from '../../../../core/services/users.service';
 import { Course } from '../../courses/models';
 import { User } from '../../users/models';
+import { AuthService } from '../../../../core/services/auth.service';
 
 interface EnrollmentDialogData {
   editingEnrollment?: Enrollment;
@@ -24,23 +25,23 @@ export class EnrollmentDialogComponent {
  
   studentsList: Student[]=[];
   coursesList: Course[]=[];
-  usersList: User[]=[];
+  user?: User | null;
 
   constructor(
     private matDialogRef: MatDialogRef<EnrollmentDialogComponent>,
     private formBuilder: FormBuilder,
     private studentsService: StudentsService,
     private coursesService: CoursesService,
-    private usersService: UsersService,
+    private authService: AuthService,
     @Inject(MAT_DIALOG_DATA) public data?: EnrollmentDialogData
    ){
     console.log(data);
 
     this.enrollmentForm = this.formBuilder.group({
-      student: [null, [Validators.required]],
-      course: [null, [Validators.required]],
+      studentId: [null, [Validators.required]],
+      courseId: [null, [Validators.required]],
     });
-    this.loadUsers();
+    this.loadAuth();
     this.loadCourses();
     this.loadStudents();
     this.patchFormValue();
@@ -52,9 +53,9 @@ export class EnrollmentDialogComponent {
     });
   }
 
-  loadUsers(): void {
-    this.usersService.getUsers().subscribe({
-      next: (user) => this.usersList = user
+  loadAuth(): void {
+    this.authService.authUser$.subscribe({
+      next: (user) => this.user = user
     });
   }
 
@@ -70,14 +71,13 @@ export class EnrollmentDialogComponent {
 
   patchFormValue() {
     if (this.data?.editingEnrollment) {
-      const course = this.coursesList.find(c=>c.id===this.data?.editingEnrollment?.course.id);
-      const student = this.studentsList.find(s=>s.id===this.data?.editingEnrollment?.student.id);
+      const course = this.coursesList.find(c=>c.id===this.data?.editingEnrollment?.courseId);
+      const student = this.studentsList.find(s=>s.id===this.data?.editingEnrollment?.studentId);
       this.enrollmentForm.patchValue({...this.data.editingEnrollment,course,student});
     }
   }
 
   onSave(): void {
-    console.log(this.enrollmentForm.value);
     if (this.enrollmentForm.invalid){
       this.enrollmentForm.markAllAsTouched();
     } else {
@@ -89,6 +89,7 @@ export class EnrollmentDialogComponent {
         enrolledAt: this.isEditing
         ? this.data!.editingEnrollment!.enrolledAt
         : new Date(),
+        userId: this.user?.id
       });
     }
     

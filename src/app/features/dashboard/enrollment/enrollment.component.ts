@@ -80,6 +80,8 @@ export class EnrollmentComponent implements OnInit {
             if (editingEnrollment) {
               this.handleUpdate(editingEnrollment.id, result);
             } else {
+              console.log("---")
+              console.log(result);
               this.handleInsert(result);
             }
             
@@ -104,10 +106,11 @@ export class EnrollmentComponent implements OnInit {
   }
 
   handleInsert( update: Enrollment): void {
+    
     this.isLoading = true;
     this.enrollmentsService.insertEnrollment(update).subscribe({
       next: (enrollments) => {
-        this.dataSource = enrollments;
+        this.loadEnrollments();
       },
       error: (err) => {
         this.isLoading = false;

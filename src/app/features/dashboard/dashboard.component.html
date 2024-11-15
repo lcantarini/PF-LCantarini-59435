@@ -2,52 +2,60 @@
     <!-- SIDEBAR (MENU LATERAL) -->
     <mat-drawer #drawer class="example-sidenav" mode="side">
       <mat-nav-list>
+        
         <a
           routerLink="home"
           mat-list-item
           routerLinkActive
           #homelink="routerLinkActive"
           [activated]="homelink.isActive"
-          >Inicio</a>
+          ><mat-icon>homelink</mat-icon
+            > Inicio</a>
         <a
           routerLink="users"
           mat-list-item
           routerLinkActive
           #usersLink="routerLinkActive"
           [activated]="usersLink.isActive"
-          >Usuarios</a>
+          ><mat-icon>account_circle</mat-icon>
+           Usuarios</a>
           <a
           routerLink="students"
           mat-list-item
           routerLinkActive
           #studentsLink="routerLinkActive"
           [activated]="studentsLink.isActive"
-          >Alumnos</a>
+          ><mat-icon>person</mat-icon>
+           Alumnos</a>
           <a
           routerLink="courses"
           mat-list-item
           routerLinkActive
           #coursesLink="routerLinkActive"
           [activated]="coursesLink.isActive"
-          >Cursos</a>
+          ><mat-icon>library_books</mat-icon>
+           Cursos</a>
           <a
           routerLink="class"
           mat-list-item
           routerLinkActive
           #classesLink="routerLinkActive"
           [activated]="classesLink.isActive"
-          >Clases</a>
+          ><mat-icon>list_alt</mat-icon>
+           Clases</a>
           <a
           routerLink="enrollment"
           mat-list-item
           routerLinkActive
           #enrollmentLink="routerLinkActive"
           [activated]="enrollmentLink.isActive"
-          >Inscripciones</a>
+          ><mat-icon>edit_square</mat-icon>
+           Inscripciones</a>
         <a
           (click)="logout()"
           mat-list-item
-          >Cerrar Sesion</a>
+          ><mat-icon>logout</mat-icon>
+           Cerrar Sesion</a>
       </mat-nav-list>
     </mat-drawer>
   
@@ -71,7 +79,7 @@
         <span>MochAcad</span>
       </div>
       <div *ngIf="authUser$ | async; let authUser">
-        <p>{{ authUser.firstName }} {{ authUser.lastName }}</p>
+        <p><mat-icon>account_circle</mat-icon> {{ authUser.firstName }} {{ authUser.lastName }}</p>
       </div>
     </div>
       </mat-toolbar>

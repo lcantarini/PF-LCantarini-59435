@@ -146,6 +146,25 @@
       "startAt": "2024-10-24T00:15:26.790Z",
       "endAt": "2024-10-24T00:15:26.790Z",
       "createdAt": "2024-10-24T00:15:26.790Z"
+    },
+    {
+      "id": "8HfI",
+      "student": {
+        "id": "2",
+        "firstName": "Helium",
+        "lastName": "Gomez",
+        "createdAt": "2024-10-24T00:15:26.790Z",
+        "email": "Helium@gmail.com"
+      },
+      "course": {
+        "id": "Glo4",
+        "name": "MongoDB",
+        "startAt": "2024-10-24T00:15:26.790Z",
+        "endAt": "2024-10-24T00:15:26.790Z",
+        "createdAt": "2024-10-24T00:15:26.790Z"
+      },
+      "enrolledAt": "2024-11-14T20:24:24.569Z",
+      "createdAt": "2024-11-14T20:24:24.649Z"
     }
   ],
   "students": [
@@ -188,31 +207,64 @@
   "enrollments": [
     {
       "id": "Jhhj",
-      "student": "0",
-      "course": "0",
-      "user": "0",
+      "studentId": "1",
+      "courseId": "ts4l",
+      "userId": "1",
       "enrolledAt": "2024-10-24T00:15:26.790Z"
     },
     {
       "id": "CBDb",
-      "student": "0",
-      "course": "1",
-      "user": "0",
+      "studentId": "1",
+      "courseId": "t4CL",
+      "userId": "1",
       "enrolledAt": "2024-10-24T00:15:26.790Z"
     },
     {
       "id": "vMaD",
-      "student": "2",
-      "course": "2",
-      "user": "2",
+      "studentId": "3",
+      "courseId": "NWcZ",
+      "userId": "3",
       "enrolledAt": "2024-10-24T00:15:26.790Z"
     },
     {
       "id": "BDVF",
-      "student": "1",
-      "course": "1",
-      "user": "1",
+      "studentId": "2",
+      "courseId": "t4CL",
+      "userId": "2",
       "enrolledAt": "2024-10-24T00:15:26.790Z"
+    },
+    {
+      "id": "ba59",
+      "studentId": "1",
+      "courseId": "NWcZ",
+      "userId": "1"
+    },
+    {
+      "id": "1762",
+      "studentId": "1",
+      "courseId": "NWcZ",
+      "userId": "1"
+    },
+    {
+      "id": "af09",
+      "studentId": "2",
+      "courseId": "NWcZ",
+      "userId": "1",
+      "enrolledAt": "2024-10-24T00:15:26.790Z"
+    },
+    {
+      "id": "543a",
+      "studentId": "2",
+      "courseId": "t4CL",
+      "userId": "99e9",
+      "enrolledAt": "2024-10-24T00:15:26.790Z"
+    },
+    {
+      "id": "bf9e",
+      "studentId": "5",
+      "courseId": "C7PA",
+      "userId": "99e9",
+      "enrolledAt": "2024-11-15T14:06:29.670Z"
     }
   ]
 }
