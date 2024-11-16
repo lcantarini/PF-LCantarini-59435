@@ -69,4 +69,13 @@ export class AuthService {
     return !!user;
   }))
   }
+
+  verifyAdmin(): Observable<boolean> {
+    let isAdmin: boolean = false;
+    this.authUser$.subscribe({next: (user) => isAdmin = (user?.profile === 'ADMIN')
+    });
+
+    return of(isAdmin)
+    
+  }
 }

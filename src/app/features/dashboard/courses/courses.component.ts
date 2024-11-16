@@ -4,6 +4,9 @@ import { Course } from './models';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CourseDialogComponent } from './course-dialog/course-dialog.component';
+import { User } from '../users/models';
+import { Observable } from 'rxjs';
+import { AuthService } from '../../../core/services/auth.service';
 
 @Component({
   selector: 'app-courses',
@@ -16,13 +19,17 @@ export class CoursesComponent implements OnInit {
    
   isLoading: boolean = false;
   dataSource: Course[] = [];
+  authUser$: Observable<User | null>;
 
   constructor(
     private matDialog: MatDialog,
     private router: Router,
     private coursesService: CoursesService,
-    private activatedRoute: ActivatedRoute    
-  ) {}
+    private activatedRoute: ActivatedRoute, 
+    private authService: AuthService  
+  ) {
+    this.authUser$ = this.authService.authUser$;
+  }
   
   ngOnInit(): void {
     this.loadCourses();

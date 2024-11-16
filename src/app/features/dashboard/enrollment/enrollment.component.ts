@@ -5,6 +5,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { CoursesService } from '../../../core/services/courses.service';
 import { EnrollmentsService } from '../../../core/services/enrollments.service';
 import { EnrollmentDialogComponent } from './enrollment-dialog/enrollment-dialog.component';
+import { AuthService } from '../../../core/services/auth.service';
+import { User } from '../users/models';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-enrollment',
@@ -17,13 +20,17 @@ export class EnrollmentComponent implements OnInit {
    
   isLoading: boolean = false;
   dataSource: Enrollment[] = [];
+  authUser$: Observable<User | null>;
 
   constructor(
     private matDialog: MatDialog,
     private router: Router,
     private enrollmentsService: EnrollmentsService,
-    private activatedRoute: ActivatedRoute    
-  ) {}
+    private activatedRoute: ActivatedRoute, 
+    private authService: AuthService   
+  ) {
+    this.authUser$ = this.authService.authUser$;
+  }
   
   ngOnInit(): void {
     this.loadEnrollments();

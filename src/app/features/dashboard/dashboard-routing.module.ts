@@ -6,6 +6,8 @@ import { CoursesModule } from './courses/courses.module';
 import { StudentsModule } from './students/students.module';
 import { ClassModule } from './class/class.module';
 import { EnrollmentModule } from './enrollment/enrollment.module';
+import { authGuard } from '../../core/guards/auth.guard';
+import { usersGuard } from '../../core/guards/users.guard';
 
 const routes: Routes = [
   {path: 'home',
@@ -13,6 +15,7 @@ const routes: Routes = [
   },
   {
     path: 'users',
+    canActivate: [usersGuard],
     loadChildren: () => UsersModule
   },
   {

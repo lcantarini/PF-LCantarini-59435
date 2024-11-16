@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ClassComponent } from './class.component';
+import { usersGuard } from '../../../core/guards/users.guard';
 
 const routes: Routes = [
   {
     path: '',
+    canActivate: [usersGuard],
     component: ClassComponent,
   },
 ];

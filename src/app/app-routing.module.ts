@@ -9,6 +9,7 @@ import { DashboardModule } from './features/dashboard/dashboard.module';
 import { EnrollmentComponent } from './features/dashboard/enrollment/enrollment.component';
 import { ClassComponent } from './features/dashboard/class/class.component';
 import { authGuard } from './core/guards/auth.guard';
+import { usersGuard } from './core/guards/users.guard';
 
 const routes: Routes = [
   {
@@ -28,10 +29,12 @@ const routes: Routes = [
   },
   {
     path: 'users',
+    canActivate: [usersGuard],
     component: UsersComponent,
   },
   {
     path: 'class',
+    canActivate: [usersGuard],
     component: ClassComponent,
   },
   {

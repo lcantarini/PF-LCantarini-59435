@@ -11,14 +11,15 @@
           [activated]="homelink.isActive"
           ><mat-icon>homelink</mat-icon
             > Inicio</a>
-        <a
+        @if((authUser$ | async)?.profile === 'ADMIN'){
+            <a
           routerLink="users"
           mat-list-item
           routerLinkActive
           #usersLink="routerLinkActive"
           [activated]="usersLink.isActive"
           ><mat-icon>account_circle</mat-icon>
-           Usuarios</a>
+           Usuarios</a>}
           <a
           routerLink="students"
           mat-list-item
@@ -35,7 +36,8 @@
           [activated]="coursesLink.isActive"
           ><mat-icon>library_books</mat-icon>
            Cursos</a>
-          <a
+           @if((authUser$ | async)?.profile === 'ADMIN'){
+           <a
           routerLink="class"
           mat-list-item
           routerLinkActive
@@ -43,6 +45,7 @@
           [activated]="classesLink.isActive"
           ><mat-icon>list_alt</mat-icon>
            Clases</a>
+           }
           <a
           routerLink="enrollment"
           mat-list-item
