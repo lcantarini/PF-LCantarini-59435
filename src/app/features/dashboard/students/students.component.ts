@@ -4,6 +4,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { Student } from './models';
 import { StudentDialogComponent } from './student-dialog/student-dialog.component';
+import { User } from '../users/models';
+import { Observable } from 'rxjs';
+import { AuthService } from '../../../core/services/auth.service';
 
 @Component({
   selector: 'app-students',
@@ -14,6 +17,7 @@ export class StudentsComponent implements OnInit{
 
   displayedColumns: string[] = ['id', 'name', 'email', 'createdAt', 'actions' ];
   dataSource: Student[] = [];
+  authUser$: Observable<User | null>;
 
   isLoading = false;
 
@@ -21,9 +25,12 @@ export class StudentsComponent implements OnInit{
     private matDialog: MatDialog,
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    private studentsService: StudentsService
+    private studentsService: StudentsService, 
+    private authService: AuthService
 
-  ){}
+  ){
+    this.authUser$ = this.authService.authUser$;
+  }
 
   ngOnInit(): void {
     this.loadStudents();

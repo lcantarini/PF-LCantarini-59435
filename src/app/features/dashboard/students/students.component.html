@@ -6,14 +6,14 @@
       <mat-spinner></mat-spinner>
     
       } @else {
-  
+        @if((authUser$ | async)?.profile === 'ADMIN'){
     <button mat-button (click)="openModal()">
       <mat-icon>
         add
       </mat-icon>
       Crear alumno
     </button>
-  
+        }
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   
       <!--- Note that these columns can be defined in any order.
@@ -50,12 +50,14 @@
           <button (click)="goToDetail(student.id)" mat-icon-button>
             <mat-icon>visibility</mat-icon>
           </button>
+          @if((authUser$ | async)?.profile === 'ADMIN'){
           <button (click)="openModal(student)" mat-icon-button>
             <mat-icon>edit</mat-icon>
           </button>
           <button (click)="onDelete(student.id)" mat-icon-button>
             <mat-icon>delete</mat-icon>
           </button>
+        }
         </td>
       </ng-container>
     
