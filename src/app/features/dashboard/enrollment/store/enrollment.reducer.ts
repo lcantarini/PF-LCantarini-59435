@@ -36,7 +36,7 @@ const STUDENT_DB: Student[] = []
 
 export interface State {
   isLoadingEnrollments: boolean;
-  loadEnrollmentsError: unknown;
+  loadEnrollmentsError: Error | null;
   enrollments: Enrollment[];
   userOptions: User[];
   courseOptions: Course[];

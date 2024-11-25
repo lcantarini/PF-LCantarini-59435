@@ -6,7 +6,7 @@ export const EnrollmentActions = createActionGroup({
   events: {
     'Load Enrollments': emptyProps(),
     'Load Enrollments Success': props<{ data: Enrollment[]}>(),
-    'Load Enrollments Failure': props<{ error: unknown}>(),
+    'Load Enrollments Failure': props<{ error: Error}>(),
     'Load User Options': emptyProps(),
     'Load Course Options': emptyProps(),
     'loadStudentOptions': emptyProps(),

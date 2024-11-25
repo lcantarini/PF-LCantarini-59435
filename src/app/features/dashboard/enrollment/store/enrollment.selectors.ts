@@ -24,3 +24,8 @@ export const selectStudentOptions = createSelector(
   selectEnrollmentState, 
   (state) => state.studentOptions
 )
+
+export const selectLoadEnrollmentsError = createSelector(
+  selectEnrollmentState, 
+  (state) => state.loadEnrollmentsError
+)

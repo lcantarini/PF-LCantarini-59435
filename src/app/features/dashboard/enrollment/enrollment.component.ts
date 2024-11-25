@@ -8,6 +8,9 @@ import { EnrollmentDialogComponent } from './enrollment-dialog/enrollment-dialog
 import { AuthService } from '../../../core/services/auth.service';
 import { User } from '../users/models';
 import { Observable } from 'rxjs';
+import { selectEnrollments, selectLoadEnrollmentsError } from './store/enrollment.selectors';
+import { Store } from '@ngrx/store';
+import { EnrollmentActions } from './store/enrollment.actions';
 
 @Component({
   selector: 'app-enrollment',
@@ -22,22 +25,30 @@ export class EnrollmentComponent implements OnInit {
   dataSource: Enrollment[] = [];
   authUser$: Observable<User | null>;
 
+  loadEnrollmentsError$: Observable<Error | null>;
+  loadEnrollments$: Observable<Enrollment[]>;
+
   constructor(
     private matDialog: MatDialog,
     private router: Router,
     private enrollmentsService: EnrollmentsService,
     private activatedRoute: ActivatedRoute, 
-    private authService: AuthService   
+    private authService: AuthService,
+    private store: Store   
   ) {
     this.authUser$ = this.authService.authUser$;
+    this.loadEnrollmentsError$ = this.store.select(selectLoadEnrollmentsError);
+    this.loadEnrollments$ = this.store.select(selectEnrollments)
   }
   
   ngOnInit(): void {
     this.loadEnrollments();
+    console.log(this.loadEnrollments)
   }
   
   loadEnrollments() {
     this.isLoading = true;
+    this.store.dispatch(EnrollmentActions.loadEnrollments());
     this.enrollmentsService.getEnrollments().subscribe({
       next: (enrollments) => {
         this.dataSource = enrollments;
